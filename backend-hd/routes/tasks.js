@@ -2,57 +2,109 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models');
 const jwt = require('jsonwebtoken');
-const sendEmail = require('../services/emailService'); // Putanja do fajla u kojem je funkcija sendEmail
+const sendEmail = require('../services/emailService'); // Servis za slanje emailova
 
-
-router.get('/all-tasks', async(req, res) => {
+// Ruta za dohvaćanje svih taskova
+router.get('/all-tasks', async (req, res) => {
     try {
         const tasks = await db.Taskovi.findAll({
             include: [{
                 model: db.User,
-                as: 'User', // Ovo mora biti isto kao što je definirano u modelu Taskovi
-                attributes: ['firstname', 'lastname'], // Atributi koje želiš prikazati
-            }]
+                as: 'User',
+                attributes: ['firstname', 'lastname'], // Prikaži samo ove atribute korisnika
+            },
+            {
+                model: db.PrijavaSmetnji,  // Uključujemo tabelu PrijavaSmetnji
+                as: 'PrijavaSmetnji',
+                attributes: ['validacija', 'comment'] // Ovo su kolone koje nas zanimaju
+            }
+        ]
         });
 
-        console.log('Dohvaćeni taskovi:', tasks);
-        res.json(tasks); // Provjeri da li se šalju unutar objekta
+        res.json(tasks);
     } catch (error) {
         console.error('Greška prilikom dohvata taskova:', error);
         res.status(500).json({ message: 'Greška na serveru' });
     }
-});;
+});
 
-router.put('/verify-task/:id', async(req, res) => {
+// Ruta za ovjeru taska od strane šefa sektora
+router.put('/verify-task/:id', async (req, res) => {
     const { id } = req.params;
 
     try {
+        // Pronađi task po ID-u
         const task = await db.Taskovi.findByPk(id);
         if (!task) {
             return res.status(404).json({ message: 'Task nije pronađen' });
         }
+        
 
+        // Verifikuj task
         task.verifikacija = true;
         await task.save();
 
-        // Ažuriranje prijave smetnje, ako postoji
+        // Ako task ima povezanu prijavu smetnji, ažuriraj njen status
         if (task.prijavaSmetnjiId) {
             const complaint = await db.PrijavaSmetnji.findByPk(task.prijavaSmetnjiId);
             if (complaint) {
-                complaint.hasTask = false; // Task je ovjeren, sada uklanjamo prijavu
+                complaint.status = 'Ovjereno'; // Ažuriraj status na "Ovjereno"
                 await complaint.save();
+
+                // Pošalji email osobi koja je prijavila smetnju
+                const subject = `Vaša prijava je ovjerena`;
+                const validationLink = `http://192.168.35.62:3001/validacija/${task.id}`;  // Dinamički generisani link za validaciju
+                const text = `Poštovani, vaša prijava pod nazivom "${complaint.opis}" je sada ovjerena. 
+                Vašu prijavu trebate validirati na linku: ${validationLink} 
+                Hvala Vam!`;
+                await sendEmail(complaint.email, subject, text);
             }
         }
 
-        res.json({ message: 'Task je uspješno ovjeren' });
+        return res.json({ message: 'Task je uspješno ovjeren i status prijave je ažuriran.' });
     } catch (error) {
         console.error('Greška prilikom verifikacije taska:', error.message);
-        res.status(500).json({ message: 'Greška na serveru' });
+        return res.status(500).json({ message: 'Greška na serveru.' });
     }
 });
 
-// API za ažuriranje statusa na "Završeno" od strane radnika
-router.put('/complete-task/:id', async(req, res) => {
+
+
+router.put('/validate/:taskId', async (req, res) => {
+    const { taskId } = req.params;
+    const { validation, comment } = req.body;
+
+    try {
+        const task = await db.Taskovi.findByPk(taskId);
+
+        if (!task) {
+            return res.status(404).json({ message: 'Task nije pronađen' });
+        }
+
+        // Pronađi prijavu smetnji povezanu s taskom
+        const complaint = await db.PrijavaSmetnji.findByPk(task.prijavaSmetnjiId);
+
+        if (!complaint) {
+            return res.status(404).json({ message: 'Prijava smetnji nije pronađena' });
+        }
+
+        // Ažuriraj validaciju i komentar u tabeli PrijavaSmetnji
+        complaint.validacija = validation === 'Odobreno';  // Ako je validacija odobrena, postavi true
+        complaint.comment = comment || '';  // Postavi komentar ako postoji
+
+        await complaint.save();  // Spasi promjene u bazi
+
+
+        return res.json({ message: 'Validacija uspješno spremljena.' });
+    } catch (error) {
+        console.error('Greška prilikom validacije taska:', error);
+        return res.status(500).json({ message: 'Greška prilikom validacije.' });
+    }
+});
+
+
+// Ruta za završavanje taska od strane radnika
+router.put('/complete-task/:id', async (req, res) => {
     try {
         const taskId = req.params.id;
         const task = await db.Taskovi.findByPk(taskId);
@@ -61,254 +113,25 @@ router.put('/complete-task/:id', async(req, res) => {
             return res.status(404).json({ message: 'Task nije pronađen' });
         }
 
-        // Provjeri da li task ima sektor, ako nema, postavi grešku
-        if (!task.sector) {
-            return res.status(400).json({ message: 'Task nema definisan sektor' });
-        }
-
-        // Ruta za dohvaćanje svih taskova
-        router.get('/all-tasks', async(req, res) => {
-            try {
-                const tasks = await db.Taskovi.findAll({
-                    include: [{
-                        model: db.User,
-                        as: 'User', // Ime relacije kako je definirano u modelu Taskovi
-                        attributes: ['firstname', 'lastname'], // Atributi korisnika koje želimo prikazati
-                    }]
-                });
-
-                console.log('Dohvaćeni taskovi:', tasks);
-                res.json(tasks);
-            } catch (error) {
-                console.error('Greška prilikom dohvata taskova:', error);
-                res.status(500).json({ message: 'Greška na serveru' });
-            }
-        });
-
-        // Ruta za ovjeru taska od strane šefa sektora
-        router.put('/verify-task/:id', async(req, res) => {
-            const { id } = req.params;
-
-            try {
-                const task = await db.Taskovi.findByPk(id);
-                if (!task) {
-                    return res.status(404).json({ message: 'Task nije pronađen' });
-                }
-
-                task.verifikacija = true; // Oznaka da je task ovjeren
-                await task.save();
-
-                // Ažuriraj prijavu smetnji, ako postoji, uklanjajući oznaku `hasTask`
-                if (task.prijavaSmetnjiId) {
-                    const complaint = await db.PrijavaSmetnji.findByPk(task.prijavaSmetnjiId);
-                    if (complaint) {
-                        complaint.hasTask = false; // Task je ovjeren, prijava više nije aktivna
-                        await complaint.save();
-                    }
-                }
-
-                res.json({ message: 'Task je uspješno ovjeren' });
-            } catch (error) {
-                console.error('Greška prilikom verifikacije taska:', error.message);
-                res.status(500).json({ message: 'Greška na serveru' });
-            }
-        });
-
-        // Ruta za završavanje taska od strane radnika
-        router.put('/complete-task/:id', async(req, res) => {
-            try {
-                const taskId = req.params.id;
-                console.log('Primljen taskId:', taskId);
-
-                // Pronađi task na osnovu ID-a
-                const task = await db.Taskovi.findByPk(taskId);
-
-                // Provjeri da li task postoji
-                if (!task) {
-                    console.log('Task sa ID-jem', taskId, 'nije pronađen.');
-                    return res.status(404).json({ message: 'Task nije pronađen' });
-                }
-
-                console.log('Task pronađen:', task);
-
-                // Ažuriraj status na "Završeno"
-                task.status = 'Završeno';
-                await task.save();
-
-                // Pronađi radnika koji je završio task
-                const user = await db.Users.findByPk(task.userId);
-                if (!user) {
-                    console.log('Korisnik nije pronađen');
-                    return res.status(404).json({ message: 'Korisnik nije pronađen' });
-                }
-
-                console.log('Ime korisnika:', user.firstname);
-                console.log('Prezime korisnika:', user.lastname);
-
-
-                // Pronađi šefa sektora kojem treba poslati email
-                const sectorManager = await db.User.findOne({
-                    where: {
-                        sector: task.sector,
-                        role: 'Sector Manager'
-                    }
-                });
-
-                if (sectorManager) {
-                    console.log(`Slanje emaila na: ${sectorManager.email}`);
-
-                    const subject = `Task je završen: ${task.sifra_taska}`;
-                    const text = `Radnik ${user.firstname} ${user.lastname} je završio task: "${task.naziv_taska}" sa šifrom: ${task.sifra_taska}. Molimo da ga ovjerite.`;
-
-                    console.log(`Tekst emaila: ${text}`); // Dodaj log za tekst emaila
-
-                    await sendEmail(sectorManager.email, subject, text);
-                } else {
-                    console.log('Nema voditelja sektora za slanje emaila.');
-                }
-
-                res.json({ message: 'Task je uspješno završen i email je poslan šefu sektora!' });
-            } catch (error) {
-                console.error('Greška prilikom završavanja taska:', error);
-                res.status(500).json({ message: 'Greška na serveru' });
-            }
-        });
-
-        // Ruta za kreiranje novog taska
-        router.post('/create-task', async(req, res) => {
-            try {
-                const { naziv_taska, tekst_taska, prioritet, sector, userId, prijavaSmetnjiId } = req.body;
-
-                // Provjeri da li backend prima sector iz requesta
-                console.log('Primljeni podaci sa frontenda:', req.body);
-                console.log('Sector primljen:', sector); // Provjeri da li sector dolazi
-
-                // Provjeri da li je sector prazan
-                if (!sector) {
-                    return res.status(400).json({ message: 'Sektor ne može biti prazan.' });
-                }
-
-                // Kreiraj task
-                const newTask = await db.Taskovi.create({
-                    naziv_taska,
-                    tekst_taska,
-                    prioritet,
-                    sector, // Ovo polje mora biti ispravno poslano iz frontenda
-                    userId,
-                    status: 'U toku',
-                    prijavaSmetnjiId
-                });
-
-                console.log('Novi task kreiran:', newTask);
-
-                res.json(newTask);
-            } catch (error) {
-                console.error('Greška prilikom kreiranja taska:', error);
-                res.status(500).json({ message: 'Greška na serveru' });
-            }
-        });
-
-
-        // Ruta za dohvaćanje taskova specifičnih za određenog korisnika
-        router.get('/user-tasks/:userId', async(req, res) => {
-            const { userId } = req.params;
-
-            if (!userId || userId === 'undefined') {
-                return res.status(400).json({ message: 'Neispravan userId' });
-            }
-
-            try {
-                const tasks = await db.Taskovi.findAll({
-                    where: { userId },
-                    include: [{
-                        model: db.User,
-                        as: 'User',
-                        attributes: ['firstname', 'lastname'],
-                    }]
-                });
-
-                if (tasks.length === 0) {
-                    return res.status(404).json({ message: 'Nema taskova za ovog korisnika' });
-                }
-
-                res.json(tasks);
-            } catch (error) {
-                console.error('Greška prilikom dohvata taskova za korisnika:', error);
-                res.status(500).json({ message: 'Greška na serveru' });
-            }
-        });
-
-        // Ruta za dohvaćanje radnika po sektoru
-        router.get('/workers', async(req, res) => {
-            const { sector } = req.query;
-
-            try {
-                const workers = await db.User.findAll({
-                    where: { sector }
-                });
-
-                if (workers.length === 0) {
-                    return res.status(404).json({ message: 'Nema radnika za navedeni sektor' });
-                }
-
-                res.json(workers);
-            } catch (error) {
-                console.error('Greška prilikom dohvata radnika:', error.message);
-                res.status(500).json({ message: 'Greška na serveru' });
-            }
-        });
-
-        // Ruta za dohvaćanje taskova specifičnih za radnika
-        router.get('/worker-tasks', async(req, res) => {
-            const authHeader = req.headers['authorization'];
-            const token = authHeader && authHeader.split(' ')[1]; // Izvuci token iz Authorization header-a
-
-            if (!token) return res.status(401).json({ message: 'Pristup odbijen. Nema tokena.' });
-
-            try {
-                const decoded = jwt.verify(token, 'tajna'); // Dekodiraj token koristeći tvoju tajnu
-                const userId = decoded.id; // Preuzmi ID korisnika iz tokena
-
-                const tasks = await db.Taskovi.findAll({
-                    where: { userId }
-                });
-
-                if (tasks.length === 0) {
-                    return res.status(404).json({ message: 'Nema taskova za prikaz.' });
-                }
-
-                res.json(tasks);
-            } catch (error) {
-                console.error('Greška prilikom dohvata taskova:', error);
-                res.status(500).json({ message: 'Greška na serveru' });
-            }
-        });
-
-        module.exports = router;
-
-        // Ažuriraj status taska na 'Završeno'
+        // Ažuriraj status na "Završeno"
         task.status = 'Završeno';
         await task.save();
 
         // Pronađi radnika koji je završio task
-        const user = await db.User.findByPk(task.userId); // Pretpostavljam da task ima polje userId
+        const user = await db.User.findByPk(task.userId);
         if (!user) {
             return res.status(404).json({ message: 'Radnik nije pronađen' });
         }
 
         // Pronađi šefa sektora kojem treba poslati email
         const sectorManager = await db.User.findOne({
-            where: {
-                sector: task.sector, // Pretpostavi da task ima 'sector' polje
-                role: 'Sector Manager' // Role šefa sektora
-            }
+            where: { sector: task.sector, role: 'Sector Manager' }
         });
 
         if (sectorManager) {
             const subject = `Task je završen: ${task.sifra_taska}`;
-            const text = `Kolega ${user.firstname} ${user.lastname} je završio task: "${task.naziv_taska}" sa šifrom: ${task.sifra_taska}. Molimo da ga ovjerite.`;
+            const text = `Radnik ${user.firstname} ${user.lastname} je završio task: "${task.naziv_taska}". Molimo da ga ovjerite.`;
 
-            // Pošalji email šefu sektora
             await sendEmail(sectorManager.email, subject, text);
         }
 
@@ -319,14 +142,11 @@ router.put('/complete-task/:id', async(req, res) => {
     }
 });
 
-
-
-
-router.post('/create-task', async(req, res) => {
+// Ruta za kreiranje novog taska
+router.post('/create-task', async (req, res) => {
     try {
         const { prijavaSmetnjiId, sifra_taska, naziv_taska, tekst_taska, prioritet, userId } = req.body;
 
-        // Kreiranje novog taska
         const newTask = await db.Taskovi.create({
             prijavaSmetnjiId,
             sifra_taska,
@@ -337,17 +157,15 @@ router.post('/create-task', async(req, res) => {
             userId
         });
 
-        // Ažuriranje PrijavaSmetnji hasTask na true
         if (prijavaSmetnjiId) {
             await db.PrijavaSmetnji.update({ hasTask: true }, { where: { id: prijavaSmetnjiId } });
         }
 
+        // Pošalji email radniku
         const radnik = await db.User.findByPk(userId);
         if (radnik) {
             const subject = `Novi task: ${sifra_taska}`;
             const text = `Dobili ste novi task: "${naziv_taska}" sa šifrom: ${sifra_taska}. Molimo da obratite pažnju.`;
-
-            // Pošalji email radniku
             await sendEmail(radnik.email, subject, text);
         }
 
@@ -358,71 +176,50 @@ router.post('/create-task', async(req, res) => {
     }
 });
 
+// PUT ruta za dodavanje ili ažuriranje komentara za task
+router.put('/add-comment/:taskId', async (req, res) => {
+    console.log(req.body);
+    const { taskId } = req.params;
+    const { comment } = req.body;
+
+    try {
+        // Prikazi log kako bi bio siguran da primaš ID taska i komentar
+        console.log(`Primljen taskId: ${taskId}, Primljen komentar: ${comment}`);
+
+        const task = await db.Taskovi.findByPk(taskId); // Provjerite da model "Taskovi" postoji u vašoj bazi
+
+        if (!task) {
+            return res.status(404).json({ message: 'Task nije pronađen.' });
+        }
+
+        // Ažuriraj task s novim komentarom
+        task.comment = comment;
+        await task.save();
+
+        console.log('Komentar uspješno ažuriran:', task.comment);
+
+        return res.json({ message: 'Komentar uspješno ažuriran.' });
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ message: 'Greška prilikom ažuriranja komentara.' });
+    }
+});
+
 // Ruta za dohvaćanje taskova specifičnih za određenog korisnika
-router.get('/user-tasks/:userId', async(req, res) => {
-    const { userId } = req.params;
-    console.log('Primljen userId:', userId);
-
-    if (userId === 'undefined' || !userId) {
-        return res.status(400).json({ message: 'Neispravan userId' });
-    }
-
-    try {
-        const tasks = await db.Taskovi.findAll({
-            where: { userId },
-            include: [{
-                model: db.User,
-                as: 'User',
-                attributes: ['firstname', 'lastname'],
-            }]
-        });
-
-        if (tasks.length === 0) {
-            console.log(`Nema taskova za userId: ${userId}`);
-            return res.status(404).json({ message: 'Nema taskova za ovog korisnika' });
-        }
-
-        console.log('Dohvaćeni taskovi:', tasks);
-        res.json(tasks);
-    } catch (error) {
-        console.error('Greška prilikom dohvata taskova za korisnika:', error);
-        res.status(500).json({ message: 'Greška na serveru' });
-    }
-});
-// Ruta za dohvaćanje radnika po sektoru
-router.get('/workers', async(req, res) => {
-    const { sector } = req.query;
-
-    try {
-        const workers = await db.User.findAll({
-            where: { sector: sector }
-        });
-
-        if (workers.length === 0) {
-            return res.status(404).json({ message: 'Nema radnika za navedeni sektor' });
-        }
-
-        res.json(workers);
-    } catch (error) {
-        console.error('Greška prilikom dohvata radnika:', error.message);
-        res.status(500).json({ message: 'Greška na serveru' });
-    }
-});
-
-router.get('/worker-tasks', async(req, res) => {
+router.get('/worker-tasks', async (req, res) => {
     const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1]; // Izvuci token iz Authorization header-a
+    const token = authHeader && authHeader.split(' ')[1];
 
     if (!token) return res.status(401).json({ message: 'Pristup odbijen. Nema tokena.' });
 
     try {
-        const decoded = jwt.verify(token, 'tajna'); // Dekodiraj token koristeći tvoju tajnu
-        const userId = decoded.id; // Preuzmi ID korisnika iz tokena
+        const decoded = jwt.verify(token, 'tajna');
+        const userId = decoded.id;
+
+        console.log('Dohvaćen userId:', userId);
 
         const tasks = await db.Taskovi.findAll({
-            where: {
-                userId: userId // Pronađi taskove vezane za prijavljenog korisnika
-            }
+            where: { userId }
         });
 
         if (!tasks || tasks.length === 0) {
@@ -431,10 +228,26 @@ router.get('/worker-tasks', async(req, res) => {
 
         res.json(tasks);
     } catch (error) {
-        console.error('Greška prilikom dohvata taskova:', error);
-        res.status(500).json({ message: 'Greška na serveru' });
+        console.error('Greška na serveru prilikom dohvatanja taska:', error);
+        res.status(500).json({ message: 'Greška na serveru prilikom dohvatanja taska.' });
     }
 });
 
+router.get('/:taskId', async (req, res) => {
+    const { taskId } = req.params;
+
+    try {
+        const task = await db.Taskovi.findByPk(taskId);
+
+        if (!task) {
+            return res.status(404).json({ message: 'Task nije pronađen.' });
+        }
+
+        res.json(task); // Vrati task kao odgovor
+    } catch (error) {
+        console.error('Greška prilikom dohvatanja taska:', error);
+        res.status(500).json({ message: 'Greška na serveru prilikom dohvatanja taska.' });
+    }
+});
 
 module.exports = router;

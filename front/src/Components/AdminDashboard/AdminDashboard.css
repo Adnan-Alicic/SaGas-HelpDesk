@@ -8,15 +8,22 @@ body, html {
 
 .admin-dashboard {
     padding: 20px;
-    padding-top: 800px;
+    padding-top: 400px;
     min-height: 100%;
     box-sizing: border-box;
+}
+#admin-dashboard-title{
+color: #004494;
 }
 
 h2 {
     text-align: center;
     color: white;
     margin-bottom: 20px;
+}
+
+#admin-title{
+    color: #0056b3;
 }
 
 h3 {
@@ -36,7 +43,6 @@ form input, form select {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 100%;
 }
 
 form button {
@@ -55,7 +61,6 @@ form button:hover {
 
 .table {
     width: 100%;
-    margin-top: 20px;
     border-collapse: collapse;
 }
 
@@ -152,4 +157,46 @@ form button:hover {
     margin-bottom: 20px;
     border: 1px solid #007F37;
     border-radius: 4px;
+}
+
+.table-container {
+    max-height: 400px; /* Fiksirana visina kontejnera za tabelu */
+    overflow-y: scroll; /* Omogućava vertikalni scroll */
+    border: 1px solid #ccc; /* Dodaje okvir za jasnoću */
+}
+
+.table-container::-webkit-scrollbar {
+    width: 8px; /* Širina skrol trake */
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #0056b3; /* Plava boja skrol trake */
+    border-radius: 4px; /* Zaobljeni uglovi */
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header h3 {
+    flex-grow: 1; /* Omogućava širenje h3 elementa */
+    text-align: center; /* Centriranje teksta unutar prostora */
+    margin: 0; /* Uklanja dodatne margine */
+    padding-left: 250px;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.search-input:focus {
+    border-color: #0056b3;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
 }

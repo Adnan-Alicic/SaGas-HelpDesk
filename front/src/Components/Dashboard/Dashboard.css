@@ -73,11 +73,30 @@
 
 .task-heading {
   display: flex;
-  vertical-align: top;
+  justify-content: space-between; /* Razmak između elemenata na lijevoj i desnoj strani */
+  align-items: center; /* Vertikalno centriranje elemenata */
   height: 5%;
-  margin: 0;
-  padding: 0;
+  padding: 0 16px; /* Razmak između ivica i sadržaja */
 }
+
+.task-heading-left {
+  display: flex;
+  align-items: center; /* Drži dugme i heading poravnate */
+}
+
+.button-add {
+  margin-left: 10px; /* Razmak između dugmeta i naslova */
+}
+
+.search-input {
+  width: 200px; /* Širina input polja */
+  padding: 5px 10px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 15px; /* Razmak između dugmeta i polja za pretragu */
+}
+
 
 .card-div {
   display: flex;
@@ -202,4 +221,99 @@
 
 .pagination button:hover {
   background-color: #1a4879;
+}
+
+.comment-section {
+  margin-top: 5px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dee2e6;
+}
+
+.validation-comment {
+  margin-top: 5px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dee2e6;
+}
+
+/* Stilizacija za task table samo u list view */
+.task-table {
+  width: 100%; /* Tablica zauzima punu širinu */
+  border-collapse: collapse; /* Uklanja razmak između ćelija */
+  margin-top: 20px; /* Dodaje razmak između tabele i ostalog sadržaja */
+}
+
+.task-table th, .task-table td {
+  padding: 10px 15px; /* Unutarnji razmak unutar ćelija */
+  border: 1px solid #dee2e6; /* Tanka siva linija između ćelija */
+  text-align: left; /* Poravnanje teksta u ćelijama na lijevo */
+}
+
+.task-table th {
+  background-color: #007F37; /* Tamno zelena boja za zaglavlje */
+  color: white; /* Bijela boja teksta u zaglavlju */
+  text-transform: uppercase; /* Velika slova za zaglavlje */
+  font-weight: bold; /* Podebljano zaglavlje */
+}
+
+.task-table td {
+  background-color: #f8f9fa; /* Svijetlo siva pozadina za ćelije */
+  color: #495057; /* Tamno siva boja teksta u ćelijama */
+}
+
+.task-table tbody tr:nth-child(even) {
+  background-color: #e9ecef; /* Blago sivkasta pozadina za parne redove */
+}
+
+.task-table tbody tr:hover {
+  background-color: #d6d8db; /* Tamnija siva za hover efekt */
+}
+
+/* Dugmad unutar tabele */
+.task-table .btn-show-validation, 
+.task-table .btn-show-comment, 
+.task-table .btn-ovjera {
+  padding: 5px 10px;
+  background-color: #007F37;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-table .btn-show-validation:hover, 
+.task-table .btn-show-comment:hover, 
+.task-table .btn-ovjera:hover {
+  background-color: #005F27;
+}
+
+.button-toggle-view {
+  background-color: #007F37; /* Zelena boja pozadine */
+  color: white; /* Bijela boja teksta */
+  border: none; /* Uklanjanje obruba */
+  border-radius: 5px; /* Zaobljeni uglovi */
+  padding: 10px 20px; /* Udoban razmak unutar dugmeta */
+  cursor: pointer; /* Promjena kursora na pointer */
+  font-size: 16px; /* Veličina fonta */
+  margin-left: 20px; /* Razmak između naslova i dugmeta */
+  transition: background-color 0.3s ease; /* Animacija pri hover efektu */
+}
+
+.button-toggle-view:hover {
+  background-color: #005F27; /* Tamnija zelena boja na hover */
+}
+
+.task-date {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.task-item {
+  position: relative;
 }

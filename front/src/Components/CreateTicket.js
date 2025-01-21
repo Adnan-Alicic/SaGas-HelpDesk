@@ -7,7 +7,7 @@ const CreateTicket = () => {
 
     const handleCreateTicket = async () => {
         try {
-            const response = await fetch('http://localhost:3000/tickets', {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/tickets`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

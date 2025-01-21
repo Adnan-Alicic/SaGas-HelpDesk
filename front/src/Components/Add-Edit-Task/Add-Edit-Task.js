@@ -25,7 +25,7 @@ function AddEditTask({ isOpen, toggle, defaultData, onTaskCreated }) { // Primam
 
   const fetchWorkers = async () => {
     try {
-        const response = await fetch(`http://localhost:3000/api/workers?sector=${encodeURIComponent(sector)}`);
+        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/workers?sector=${encodeURIComponent(sector)}`);
         if (!response.ok) {
             throw new Error(`Greška: ${response.statusText}`);
         }
@@ -79,7 +79,7 @@ function AddEditTask({ isOpen, toggle, defaultData, onTaskCreated }) { // Primam
         }
 
         // Slanje zahtjeva za kreiranje taska
-        const response = await fetch('http://localhost:3000/api/tasks/create-task', {
+        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/tasks/create-task`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

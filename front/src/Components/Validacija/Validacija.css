@@ -1,0 +1,144 @@
+.validacija-container {
+    margin: 20px;
+  }
+  
+  .task-heading h3 {
+    margin: 10px 0px 0px 16%;
+    color: #ff0808;
+  }
+  
+  .complaints-list {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .complaint-item {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .complaint-item h3 {
+    color: #224798;
+    font-size: 1.2em;
+  }
+  
+  .complaint-item p {
+    margin: 5px 0;
+  }
+  
+  .task-status {
+    color: green;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .btn-validiraj,
+  .btn-ponisti {
+    background-color: #007f37;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  
+  .btn-ponisti {
+    background-color: #ff0808;
+  }
+  
+  .btn-validiraj:hover {
+    background-color: #005f27;
+  }
+  
+  .btn-ponisti:hover {
+    background-color: #cc0000;
+  }
+  
+  .comment-box {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+  }
+  
+  .btn-submit {
+    background-color: #007f37;
+    color: white;
+    border: none;
+    padding: 20px 50px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px;
+  }
+  
+  .btn-cancel {
+    background-color: #ff0808;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
+  
+  .btn-submit:hover {
+    background-color: #005f27;
+  }
+  
+  .btn-cancel:hover {
+    background-color: #cc0000;
+  }
+  
+  #validacija-h2{
+    color: black;
+    margin-bottom: 300px;
+  }
+
+  .validation-options {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.validation-options label {
+    font-size: 1.5em; /* Veći tekst za opcije */
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.validation-options input[type="radio"] {
+    transform: scale(1.5); /* Povećajte veličinu radio dugmeta */
+    margin-right: 8px;
+}
+
+.comment-box {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2em; /* Veći font za komentar */
+  margin-top: 10px;
+  resize: vertical;
+}
+
+.btn-submit {
+  font-size: 1.5em; /* Veći font za dugme */
+  padding: 12px 24px;
+  display: block;
+  margin: 20px auto
+}

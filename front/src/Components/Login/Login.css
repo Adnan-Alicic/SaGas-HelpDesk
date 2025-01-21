@@ -175,3 +175,107 @@ body{
     background-color: #004494;
   }
   
+  #btn-change{
+    background-color: white; /* Bela pozadina */
+    color: #0056b3; /* Plavi tekst */
+    border: 2px solid #0056b3;
+  }
+
+  #btn-change:hover {
+    background-color: #e6f2ff; /* Svetloplava pozadina na hover */
+    color: #004494; /* Tamniji plavi tekst na hover */
+  }
+
+  /* Stil za modal */
+.modal-content {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  color: #0056b3;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-body label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #224798;
+}
+
+.modal-body input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #007F37;
+  border-radius: 4px;
+  color: #696969;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  margin-top: 140px;
+}
+
+.modal-footer button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-footer .btn-primary {
+  background-color: #0056b3;
+  color: white;
+}
+
+.modal-footer .btn-primary:hover {
+  background-color: #004494;
+}
+
+.modal-footer .btn-secondary {
+  background-color: #e6f2ff;
+  color: #0056b3;
+}
+
+.modal-footer .btn-secondary:hover {
+  background-color: #d4e6ff;
+  color: #004494;
+}
+/* Stil za pozadinu iza modala */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Crna boja sa 50% providnosti */
+  z-index: 1040; /* Ispod modala, ali iznad ostalog sadržaja */
+}
+
+/* Modal sam po sebi */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  z-index: 1050; /* Iznad pozadine */
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+}
+

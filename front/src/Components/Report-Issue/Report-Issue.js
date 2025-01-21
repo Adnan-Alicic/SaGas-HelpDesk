@@ -29,7 +29,7 @@ function ReportIssue() {
     const fetchSectors = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:3000/api/report-issue/sectors', {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/report-issue/sectors`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ function ReportIssue() {
         event.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3000/api/report-issue', {
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/report-issue`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

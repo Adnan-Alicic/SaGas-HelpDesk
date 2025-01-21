@@ -1,8 +1,11 @@
 const db = require('../models');
 const sendEmail = require('../services/emailService');
+const logController = require('../services/logService');
 const { Users, Taskovi } = require('../models');
+const { logActivity } = require('../services/logService');
+
 // Kreiranje novog tiketa
-exports.createTicket = async(req, res) => {
+exports.createTicket = async (req, res) => {
     try {
         const { title, description, userId } = req.body;
         const ticket = await db.Ticket.create({
@@ -10,6 +13,10 @@ exports.createTicket = async(req, res) => {
             description,
             userId
         });
+
+        // Logovanje kreiranja tiketa
+        await logController.logTaskAction(userId, 'ticket-create', ticket.id);
+
         res.status(201).json(ticket);
     } catch (err) {
         console.error(err);
@@ -18,7 +25,7 @@ exports.createTicket = async(req, res) => {
 };
 
 // Dobijanje svih tiketa
-exports.getAllTickets = async(req, res) => {
+exports.getAllTickets = async (req, res) => {
     try {
         const tickets = await db.Ticket.findAll();
         res.json(tickets);
@@ -29,7 +36,7 @@ exports.getAllTickets = async(req, res) => {
 };
 
 // Ažuriranje tiketa
-exports.updateTicket = async(req, res) => {
+exports.updateTicket = async (req, res) => {
     try {
         const { title, description } = req.body;
         const ticket = await db.Ticket.findByPk(req.params.id);
@@ -37,6 +44,10 @@ exports.updateTicket = async(req, res) => {
             ticket.title = title;
             ticket.description = description;
             await ticket.save();
+
+            // Logovanje ažuriranja tiketa
+            await logController.logTaskAction(ticket.userId, 'ticket-update', ticket.id);
+
             res.json(ticket);
         } else {
             res.status(404).json({ error: 'Ticket nije pronađen.' });
@@ -47,8 +58,28 @@ exports.updateTicket = async(req, res) => {
     }
 };
 
+// Brisanje tiketa
+exports.deleteTicket = async (req, res) => {
+    try {
+        const ticket = await db.Ticket.findByPk(req.params.id);
+        if (ticket) {
+            await ticket.destroy();
+
+            // Logovanje brisanja tiketa
+            await logController.logTaskAction(ticket.userId, 'ticket-delete', ticket.id);
+
+            res.status(204).send();
+        } else {
+            res.status(404).json({ error: 'Ticket nije pronađen.' });
+        }
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Nešto je pošlo po zlu prilikom brisanja tiketa.' });
+    }
+};
+
 // Funkcija kada radnik završi task
-const completeTask = async(req, res) => {
+exports.completeTask = async (req, res) => {
     const { taskId, userId } = req.body;
 
     try {
@@ -59,6 +90,9 @@ const completeTask = async(req, res) => {
             task.status = 'completed';
             await task.save();
 
+            // Logovanje aktivnosti
+            await logActivity(userId, 'complete_task', `Završen task sa ID: ${task.id}`);
+
             // Pronađi voditelja sektora na osnovu sektora radnika i role 'Sector Manager'
             const voditelj = await Users.findOne({ where: { role: 'Sector Manager', sector: radnik.sector } });
 
@@ -68,6 +102,9 @@ const completeTask = async(req, res) => {
                 const text = `Task "${task.naziv_taska}" sa šifrom "${task.sifra_taska}" je uspješno završen.`;
 
                 await sendEmail(voditelj.email, subject, text);
+
+                // Logovanje završetka taska
+                await logController.logTaskAction(userId, 'task-complete', task.id);
 
                 res.status(200).json({ message: 'Task je završen i email je poslan voditelju.' });
             } else {
@@ -82,7 +119,7 @@ const completeTask = async(req, res) => {
 };
 
 // Funkcija za kreiranje taska i slanje obavještenja radniku
-const createTask = async(req, res) => {
+exports.createTask = async (req, res) => {
     const { naziv_taska, sifra_taska, userId } = req.body;
 
     try {
@@ -103,6 +140,9 @@ const createTask = async(req, res) => {
 
             await sendEmail(radnik.email, subject, text);
 
+            // Logovanje kreiranja taska
+            await logController.logTaskAction(userId, 'task-create', task.id);
+
             res.status(201).json({ message: 'Task kreiran i obavještenje poslano radniku.' });
         } else {
             res.status(404).json({ message: 'Radnik nije pronađen ili nema ulogu User.' });
@@ -112,7 +152,4 @@ const createTask = async(req, res) => {
     }
 };
 
-module.exports = {
-    completeTask,
-    createTask,
-};
+

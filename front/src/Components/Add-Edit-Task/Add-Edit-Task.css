@@ -55,6 +55,7 @@
     border-radius: 0;
     border-width: 0 0 2px 0;
     background-color: #D9D9D9;
+    margin-bottom: 10px;
   }
 
 .overlay{
@@ -91,7 +92,6 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    height: 20px;
     margin-left: 3%;
     width: 5%;
     display: flex;
@@ -122,6 +122,7 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 18px;
+    width: 100%;
 }
 
 #email-task{
@@ -138,7 +139,6 @@
   
   margin:auto;
   border-radius: 0 4px 4px 0;
-  color: white;
 }
 
 #email-task::placeholder{
@@ -146,12 +146,11 @@
 }
 
 #priority{
-  margin-top: 10px;
   border: 2px solid #E39806;
   border-top-left-radius: 4px;
   color: white;
-  width: 52%;
   background-color: #E39806;
+  width: 50%;
 }
 
 #task-progress-select{
@@ -160,9 +159,14 @@
   color: white;
   width: 50%;
   background-color: #6E6E6E;
+  margin-bottom: 2px;
 }
 
 #option4{
   background-color: #6E6E6E;;
   color: white;
+}
+
+#worker-select{
+  width: 50%;
 }

@@ -1,29 +1,34 @@
 import './WorkerDash.css';
 import { useState, useEffect } from 'react';
-import { Button } from "reactstrap";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import ReportIssue from '../Report-Issue/Report-Issue';
 
 function WorkerDash() {
     const [tasks, setTasks] = useState([]); 
-    const [role, setRole] = useState('');  // Dodano za setRole
-    const [user, setUser] = useState({ firstname: '', lastname: '', sector: '' }); // Korisnički podaci
-    const [currentPage, setCurrentPage] = useState(1); // Pagination state
-    const tasksPerPage = 3; // Display 3 tasks per page
+    const [role, setRole] = useState('');
+    const [user, setUser] = useState({ firstname: '', lastname: '', sector: '' });
+    const [currentPage, setCurrentPage] = useState(1);
+    const tasksPerPage = 3;
     const navigate = useNavigate();
+
+    const [modalOpen, setModalOpen] = useState(false);
+    const [selectedTask, setSelectedTask] = useState(null);
+    const [commentText, setCommentText] = useState('');
+    const [showComment, setShowComment] = useState({});
+    const [searchTerm, setSearchTerm] = useState(''); // Stanje za pretragu
 
     useEffect(() => {
         const userRole = localStorage.getItem('userRole');
         setRole(userRole);
 
         if (userRole !== 'User') {
-            navigate('/'); // Ako korisnik nije radnik, preusmjeri ga
+            navigate('/');
         }
 
-        const userData = JSON.parse(localStorage.getItem('userData')); // Pretpostavimo da je ulogovani korisnik sačuvan
-        console.log("Korisnički podaci iz localStorage:", userData);
+        const userData = JSON.parse(localStorage.getItem('userData'));
         if (userData) {
-            setUser(userData); // Postavi ime, prezime i sektor
+            setUser(userData);
         }
     }, [navigate]);
 
@@ -31,7 +36,7 @@ function WorkerDash() {
         const fetchTasks = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await fetch('http://localhost:3000/api/tasks/worker-tasks', { 
+                const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/tasks/worker-tasks`, { 
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -40,7 +45,14 @@ function WorkerDash() {
                 });
 
                 const data = await response.json();
-                setTasks(data);
+                console.log('Preuzeti podaci:', data); 
+            
+                if (Array.isArray(data)) {
+                    setTasks(data);
+                } else {
+                    setTasks([]);
+                    console.error('Greška: Podaci nisu niz.');
+                }
             } catch (error) {
                 console.error('Greška prilikom preuzimanja taskova:', error);
             }
@@ -49,67 +61,137 @@ function WorkerDash() {
         fetchTasks(); 
     }, []);
 
-    // Logic for displaying tasks per page
+    // Funkcija za otvaranje/zatvaranje modala
+    const toggleModal = (task) => {
+        setSelectedTask(task);
+        setModalOpen(!modalOpen);
+    };
+
+    // Filtriraj taskove na osnovu pretrage
+    const filteredTasks = tasks.filter(task => 
+        task.naziv_taska.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        task.tekst_taska.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    // Funkcija za paginaciju
     const indexOfLastTask = currentPage * tasksPerPage;
     const indexOfFirstTask = indexOfLastTask - tasksPerPage;
-    const currentTasks = tasks.slice(indexOfFirstTask, indexOfLastTask);
+    const currentTasks = filteredTasks.slice(indexOfFirstTask, indexOfLastTask);
 
-    // Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    const totalPages = Math.ceil(filteredTasks.length / tasksPerPage);
 
-    // Total number of pages
-    const totalPages = Math.ceil(tasks.length / tasksPerPage);
+    // Funkcija za slanje komentara
+    const submitComment = async (taskId) => {
+        try {
+            const token = localStorage.getItem('token');
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/tasks/add-comment/${taskId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({ comment: commentText })
+            });
+    
+            if (response.ok) {
+                alert('Komentar uspješno pohranjen!');
+                setTasks(tasks.map(t => t.id === taskId ? { ...t, comment: commentText } : t));
+                setCommentText('');
+                setModalOpen(false);
+            } else {
+                const errorMessage = await response.json();
+                console.error('Greška prilikom slanja komentara:', errorMessage);
+                alert('Došlo je do greške prilikom pohranjivanja komentara.');
+            }
+        } catch (error) {
+            console.error('Greška prilikom slanja komentara:', error);
+            alert('Došlo je do greške na serveru.');
+        }
+    };
+
+    // Funkcija za označavanje taska kao završenog
+    const completeTask = async (taskId) => {
+        try {
+            const token = localStorage.getItem('token');
+            const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/tasks/complete-task/${taskId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+
+            if (response.ok) {
+                alert('Task je uspješno završen!');
+                setTasks(tasks.map(t => t.id === taskId ? { ...t, status: 'Završeno' } : t));
+            } else {
+                alert('Došlo je do greške prilikom završavanja taska.');
+            }
+        } catch (error) {
+            console.error('Greška prilikom završavanja taska:', error);
+            alert('Došlo je do greške na serveru.');
+        }
+    };
 
     return (
         <>
             <div className='body-dashboard'>
                 <div className='image-div'>
-                    <img style={{ height: "100%", marginTop: "5px" }} src="SarajevogasLogo2.jpg" alt="SarajevoGas Logo"></img>
+                    <img className='logo-img' src="SarajevogasLogo2.jpg" alt="SarajevoGas Logo"></img>
                 </div>
 
                 <div className='heading-div'>
                     <h2 id='h2-ds'>Helpdesk</h2>
-                    <Button style={{ textAlign: "center", textDecoration: "none", width: "10%" }} className='button-logout' to="/index"
-                        size="lg"
-                        tag={Link}>Logout</Button>
+                    <Button style={{ textAlign: "center", textDecoration: "none", width: "10%" }} className='button-logout' to="/index" size="lg" tag={Link}>Logout</Button>
                 </div>
 
                 <div className='greeting-message-div'>
-                    <h2 style={{ textAlign: "center", margin: "0", color: "#224798" }}>Dobrodošao, {user.firstname} {user.lastname} ({user.sector})</h2>
+                    <h2 className='greeting-message'>Dobrodošao, {user.firstname} {user.lastname} ({user.sector})</h2>
                 </div>
 
                 <div className='task-heading'>
-                    <h3 style={{ margin: "10px 0px 0px 16%", color: "#224798" }}>Moji Taskovi</h3>
+                    <h3>Moji Taskovi</h3>
+                    <input
+                        type="text"
+                        placeholder="Pretraži taskove"
+                        className="search-input"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        style={{ marginLeft: "auto", height: "40px" }}
+                    />
                 </div>
 
                 <div className='task-list'>
-                    {currentTasks.length > 0 ? (
-                        currentTasks.map(task => (
-                            <div key={task.id} className='task-item'>
-                                <h3>{task.naziv_taska}</h3>
-                                <p>{task.tekst_taska}</p>
-                                <p><strong>Prioritet:</strong> {task.prioritet}</p>
-                                <p><strong>Status:</strong> {task.status}</p>
-                                <Button className='btn-done'
-                                    onClick={async () => {
+    {currentTasks.length > 0 ? (
+        currentTasks.map(task => (
+            <div key={task.id} className='task-item'>
+                {/* Hard-kodirani datum prikazan u gornjem desnom uglu */}
+                <div className="task-date">Datum: 2024-11-05</div> 
+                
+                <h3>{task.naziv_taska}</h3>
+                <p>{task.tekst_taska}</p>
+                <p><strong>Prioritet:</strong> {task.prioritet}</p>
+                <p><strong>Status:</strong> {task.status}</p>
 
-                                        console.log(`Završavanje taska sa ID-om: ${task.id}`);
-                                        const response = await fetch(`http://localhost:3000/api/tasks/complete-task/${task.id}`, {
-                                            method: 'PUT',
-                                            headers: {
-                                                'Content-Type': 'application/json',
-                                            },
-                                        });
+                {task.comment ? (
+                    <Button 
+                        onClick={() => setShowComment(prev => ({ ...prev, [task.id]: !prev[task.id] }))}
+                        className='btn-show-hide'
+                    >
+                        {showComment[task.id] ? 'Hide Comment' : 'Show Comment'}
+                    </Button>
+                ) : (
+                    <Button className='btn-add-comment' onClick={() => toggleModal(task)}>Dodaj Komentar</Button>
+                )}
 
-                                        if (response.ok) {
-                                            alert('Task je uspješno završen!');
-                                            setTasks(tasks.map(t => t.id === task.id ? { ...t, status: 'Završeno' } : t));
-                                        } else {
-                                            const errorMessage = await response.json();
-                                            alert('Došlo je do greške prilikom završavanja taska.');
-                                        }
-                                    }}
-                                >
+                {showComment[task.id] && (
+                    <div className='comment-section'>
+                        <p><strong>Komentar:</strong> {task.comment}</p>
+                    </div>
+                )}
+
+                                <Button className='btn-done' onClick={() => completeTask(task.id)}>
                                     DONE
                                 </Button>
                             </div>
@@ -125,7 +207,6 @@ function WorkerDash() {
                     </div>
                 )}
 
-                {/* Pagination */}
                 <div className="pagination">
                     {[...Array(totalPages).keys()].map((page) => (
                         <Button
@@ -138,7 +219,21 @@ function WorkerDash() {
                     ))}
                 </div>
 
-                
+                <Modal isOpen={modalOpen} toggle={toggleModal}>
+                    <ModalHeader toggle={toggleModal}>Dodaj komentar</ModalHeader>
+                    <ModalBody>
+                        <textarea
+                            value={commentText}
+                            onChange={(e) => setCommentText(e.target.value)}
+                            className='comment-box'
+                            placeholder='Unesite vaš komentar...'
+                        />
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button color="primary" onClick={() => submitComment(selectedTask.id)}>Pošalji</Button>{' '}
+                        <Button color="secondary" onClick={toggleModal}>Poništi</Button>
+                    </ModalFooter>
+                </Modal>
             </div>
         </>
     );

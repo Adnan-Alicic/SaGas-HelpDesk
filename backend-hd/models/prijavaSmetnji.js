@@ -26,6 +26,14 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             defaultValue: 'Nije ovjereno',
         },
+        validacija: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: false, // Ovo će pohraniti 'Odobreno' ili 'Odbijeno'
+        },
+        comment: {
+            type: DataTypes.TEXT,  // Dodaj kolonu comment
+            allowNull: true,
+        },
         createdAt: {
             type: DataTypes.DATE,
             allowNull: false,
@@ -44,6 +52,10 @@ module.exports = (sequelize, DataTypes) => {
         tableName: 'PrijavaSmetnji', // Naziv tabele u bazi podataka (poštujte velikim slovom ako je tako u bazi)
         timestamps: true, // Automatski će raditi sa `createdAt` i `updatedAt` kolonama
     });
+
+    PrijavaSmetnji.associate = function(models) {
+        PrijavaSmetnji.hasMany(models.Taskovi, { foreignKey: 'prijavaSmetnjiId', as: 'Taskovi' });  // Veza s Taskovi
+    };
 
     return PrijavaSmetnji;
 };

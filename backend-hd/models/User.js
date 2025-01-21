@@ -16,6 +16,13 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false, // Ukoliko želiš da sektor bude obavezan
         },
+
+        pozicija: {
+            type: DataTypes.STRING,
+            allowNull: true, // Ili false ako je obavezno
+            defaultValue: 'User',
+          },
+          
         salt: DataTypes.STRING
     });
 

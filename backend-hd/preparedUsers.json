@@ -1,0 +1,1910 @@
+[
+  {
+    "firstname": "Adnan",
+    "lastname": "Aličić",
+    "email": "adnan.alicic@sarajevogas.ba",
+    "password": "$2b$10$VpGa6gNu/YEHz2MJYWB5g.G2w1cutiDtfq8lG1CMdzOzAcQyudMhC",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Adnan",
+    "lastname": "Đugum",
+    "email": "adnan.djugum@sarajevogas.ba",
+    "password": "$2b$10$MXWymwSMPMRF/1Sfmt7bnOYR1w74U1nEnkWVS1EA9aUcSAE/lP9By",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Adnan",
+    "lastname": "Hadžiomerović",
+    "email": "adnan.hadziomerovic@sarajevogas.ba",
+    "password": "$2b$10$qHVmcPxE/4LB02brRaPS7uGtT4i1pkN07jzCOMb6ghUIL3wNIv8Bi",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Poslovođa za održavanje i izgradnju gasnih mreža i priključaka"
+  },
+  {
+    "firstname": "Alisa",
+    "lastname": "Beha",
+    "email": "alisaf@sarajevogas.ba",
+    "password": "$2b$10$tFeID3Zza9JVJF6AtqwL4.KEMMDMUE7mH4u7aQKU67eeBpAY/lkIS",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za snabdijevanje prirodnim gasom"
+  },
+  {
+    "firstname": "Almina",
+    "lastname": "Masin Suljagic",
+    "email": "almina.m.suljagic@sarajevogas.ba",
+    "password": "$2b$10$uboriIo555mk3T46QTd79OuXL4dTH6VjTatEOnXpM6pQ225XWral.",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Član Nadzornog odbora"
+  },
+  {
+    "firstname": "Almira",
+    "lastname": "Djuderija",
+    "email": "almira.djuderija@sarajevogas.ba",
+    "password": "$2b$10$.TNUzaIMZbF21IqIQ8pg8eKKV8KEAeqD0Q/guM5/sLvKLCPJ1XfNC",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za plan, analizu i kontroling"
+  },
+  {
+    "firstname": "Amira",
+    "lastname": "Neradin-Šabanović",
+    "email": "amirans@sarajevogas.ba",
+    "password": "$2b$10$kt9v9zzAfANM5ygeHlqumuXqDZrd7d4YLgKMod/fSMD0S.Ze286Lu",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći referent za podršku korisnicima"
+  },
+  {
+    "firstname": "Anes",
+    "lastname": "Masic",
+    "email": "anes.masic@sarajevogas.ba",
+    "password": "$2b$10$j6hINXnWIfQoqjvKOZQ8ruquuH3j0hE8Ap1KPvLfevV2CY/EGejQm",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Član Nadzornog odbora"
+  },
+  {
+    "firstname": "Avdo",
+    "lastname": "Avdukić",
+    "email": "avdo.avdukic@sarajevogas.ba",
+    "password": "$2b$10$O8fThyGCEWD7i6yNmwvPGeDTBRDXocrHILyNAqtaaG7IMvCyfYyEu",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Šef Službe za javne nabavke"
+  },
+  {
+    "firstname": "CNG",
+    "lastname": "Punionica",
+    "email": "cng@sarajevogas.ba",
+    "password": "$2b$10$OLSm3Avht1FMvyptPqoCeuOiU/J0Bxv03WUjRAiyMWaHS43d8eRaG",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Dojavni",
+    "lastname": "Centar",
+    "email": "doc@sarajevogas.ba",
+    "password": "$2b$10$YcsYaF0P7NYmUZjpuqx7De2Npfr4vqtSoWL9j1ZsfRmRWOxpuBZUy",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Dzenita",
+    "lastname": "Rekanovic",
+    "email": "dzenita.rekanovic@sarajevogas.ba",
+    "password": "$2b$10$D2YG8dpJqP4BJJJbjGZgb.POeukjxvtgSeNaWYIPntrcin0CZzpM6",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent porto blagajnik"
+  },
+  {
+    "firstname": "Emir",
+    "lastname": "Becirevic",
+    "email": "emir.becirevic@sarajevogas.ba",
+    "password": "$2b$10$.EPk4DaFUmNPrhAbF1t94uKBSxjEnCxlwdxvZCr.iE3d0kXjHqFy6",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Strucni saradnik za pravne poslove"
+  },
+  {
+    "firstname": "Emir",
+    "lastname": "Kadrić",
+    "email": "emir.kadric@sarajevogas.ba",
+    "password": "$2b$10$H0t94VJ/ORpt/.k60dgqpuNwRonlIoT.hB59XYuM.OLzmUOeNPf3i",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Sekretar preduzeća"
+  },
+  {
+    "firstname": "Enver",
+    "lastname": "Mehic",
+    "email": "enver.mehic@sarajevogas.ba",
+    "password": "$2b$10$p0vklETY8alkrN0buGI5PuhNm11ezBEtDzCXVvDreA1n1AvYs.3Bq",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Ermin",
+    "lastname": "Efovic",
+    "email": "ermin.efovic@sarajevogas.ba",
+    "password": "$2b$10$SN0vqEb9tYjkAafX.eWPfe29RGRGZcA7mauLANOUlQSn8E3zTRQne",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Faris",
+    "lastname": "Babić",
+    "email": "faris.babic@sarajevogas.ba",
+    "password": "$2b$10$HSpPSnSVohc.fKisannxaudtdITt.feEnkwdQoNqjfL74F2rL1byG",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći inžinjer za održavanje i izgradnju gasnih mreža i priklj."
+  },
+  {
+    "firstname": "Faris",
+    "lastname": "Djugum",
+    "email": "faris.djugum@sarajevogas.ba",
+    "password": "$2b$10$lJlHjwkTwI51EQs.VZemzOUHBVfOUjvlq2X07weIM7Gl8CStcIWK.",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za nabavku"
+  },
+  {
+    "firstname": "Hase",
+    "lastname": "Tirić",
+    "email": "hase.tiric@sarajevogas.ba",
+    "password": "$2b$10$IVV.LN8hcosqUpOH7wgvD.7qs.k05EEfuVTAix.HRCAnxAGmr3aTK",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Direktor preduzeća"
+  },
+  {
+    "firstname": "Hidajet",
+    "lastname": "Idrizović",
+    "email": "hidajet.idrizovic@sarajevogas.ba",
+    "password": "$2b$10$kp34x.AafoV4Yvw5hdJoQ.aZ/tp53ENlp7vTLqs5umhPH/qRVGqJK",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Ismir",
+    "lastname": "Keric",
+    "email": "ismirk@sarajevogas.ba",
+    "password": "$2b$10$LA7A3LbUBJUn4aeGb5exoO82iCNtTjZGc.z.ddJ0rGMwcYB8r.3Kq",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Tehničar za održavanje i ugradnju mjerno regulacionih uređaja"
+  },
+  {
+    "firstname": "Ismir",
+    "lastname": "Pleh",
+    "email": "ismir.pleh@sarajevogas.ba",
+    "password": "$2b$10$COx1JZKWTDsq6ZjJ3MWaQ.vEfQNisn86OLifJhe02CNL7rxVeR3ea",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za finansijke poslove"
+  },
+  {
+    "firstname": "Jasmin",
+    "lastname": "Pilica",
+    "email": "jasmin.pilica@sarajevogas.ba",
+    "password": "$2b$10$Z9JsepfxpEeXleMI6oD.6unwuimjpjudmSoGXsLKYzk2gWsR2KuE.",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Izvršni direktor za ekonomsko pravne poslove"
+  },
+  {
+    "firstname": "Jasmina",
+    "lastname": "Dizdarevic",
+    "email": "jasminad@sarajevogas.ba",
+    "password": "$2b$10$2gqkyr3UzhBNSkl88oRAaOFwfoNVfBe.RHHANxFjwriKv9tyEGfF.",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći inžinjer za sisteme mjerenja"
+  },
+  {
+    "firstname": "Jasmina",
+    "lastname": "Hamidovic",
+    "email": "jasmina.hamidovic@sarajevogas.ba",
+    "password": "$2b$10$TOeUxXWJhyn6mVOonW97veRl1COmxTp82lqX782fY4gGJE.YPA12m",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent porto blagajnik"
+  },
+  {
+    "firstname": "Jasna",
+    "lastname": "Salihović",
+    "email": "jasna.salihovic@sarajevogas.ba",
+    "password": "$2b$10$TDYxo9JM6fz2utFzbShPguekOCwwGZFkAAIzHUmL4iGqpxTeQRPNS",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Službenik za javne nabavke"
+  },
+  {
+    "firstname": "Kenan",
+    "lastname": "Krka",
+    "email": "kenankk@sarajevogas.ba",
+    "password": "$2b$10$luzYh43TYLzjxT9JVIB7V.4jxNJ8P.FYecDJ5hyzkVfKG7Q0kDm.K",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za snabdijevanje prirodnim gasom"
+  },
+  {
+    "firstname": "Merisa",
+    "lastname": "Haskovic",
+    "email": "merisa.haskovic@sarajevogas.ba",
+    "password": "$2b$10$OX5QTdjqCYx6RBwUauL6d.04yy2G0BdhLjKkKKq0qZEeyOJ7fOLWK",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Viši referent za snabdijevanje prirodnim gasom"
+  },
+  {
+    "firstname": "Mersad",
+    "lastname": "Vlahovljak",
+    "email": "mersadv@sarajevogas.ba",
+    "password": "$2b$10$evdewP0QdDKiS.9dieLFreTAS3gi2ABDwZSBgVm2at7EDyWmvd1F.",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Inžinjer  za puštanje u pogon ugi i očitanje"
+  },
+  {
+    "firstname": "Mersiha",
+    "lastname": "Ohranovic",
+    "email": "mersihao@sarajevogas.ba",
+    "password": "$2b$10$sZzw7lADcmtrl1Y2B5Umg./Qgh8RkeNvZnVerDcTC8y5MDp.mBAau",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Inžinjer  za gis"
+  },
+  {
+    "firstname": "Mevludin",
+    "lastname": "Ugljesa",
+    "email": "mugljesa@sarajevogas.ba",
+    "password": "$2b$10$ArC/PlSG.Uh/GlPWSZwgte26bu06tH5dg00oM7a6R6sihTem2xv2y",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za saglasnosti,standarde i normative"
+  },
+  {
+    "firstname": "Milan",
+    "lastname": "Stevic",
+    "email": "mstevic@sarajevogas.ba",
+    "password": "$2b$10$QabwyG5JQfZA6ULCr.tF.uLOuVmgqHnoY9CDs/H1UTLHtsnkSeU7y",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Šef službe za održavanje i izgradnju sistema jake i slabe struje"
+  },
+  {
+    "firstname": "Minela",
+    "lastname": "Bucan",
+    "email": "minela.bucan@sarajevogas.ba",
+    "password": "$2b$10$o4n5FhLuDBbos7fp2q1.muWELSUddKXvXxmyn2ni7/6MbK3IfxRS.",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Pomoćnik direktora za ekonomsko pravne poslove"
+  },
+  {
+    "firstname": "Mirsada",
+    "lastname": "Husic Vlahovljak",
+    "email": "mirsadahv@sarajevogas.ba",
+    "password": "$2b$10$sVljjhqH/IQaOVsqOUayNuvHkdKuPYWJm31O4y/XLLxR78gkEXNEK",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za prodaju i nabavku"
+  },
+  {
+    "firstname": "Mirza",
+    "lastname": "Mahmutovic",
+    "email": "mirza.mahmutovic@sarajevogas.ba",
+    "password": "$2b$10$8r4d3in20QulX0Kp4b/TZ.tEcwfzgqpUdscSk0wWCFaInFKqDqyXe",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Mirza",
+    "lastname": "Šeperović",
+    "email": "mirza.seperovic@sarajevogas.ba",
+    "password": "$2b$10$lC/9Y.UcolcUo1hNq.Pu4OogOXQ.OYA6YiUyQrr/86IavILqxoyZu",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "monita",
+    "lastname": "iseric",
+    "email": "miseric@sarajevogas.ba",
+    "password": "$2b$10$aDzXrjFq/uDFSfrk7vIW8OEpZ6qoTvS8PzQqmkSWcRorXshnUBsMi",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći referent za pravne poslove"
+  },
+  {
+    "firstname": "Muamer",
+    "lastname": "Sutkovic",
+    "email": "msutkovic@sarajevogas.ba",
+    "password": "$2b$10$TcW95KENbzpDODYSYNJ.Nud4QDoKUiORr6J/QMb1Frf5w/rXv9KNS",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Inžinjer za sisteme upravljanja"
+  },
+  {
+    "firstname": "Muhamed",
+    "lastname": "Alicic",
+    "email": "muhameda@sarajevogas.ba",
+    "password": "$2b$10$uQrM1x03YMQMfZNeEMDrs.FA8FnVsYzsrge1SdwATKdZRVCaonYn6",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Inžinjer zaštite na radu"
+  },
+  {
+    "firstname": "Muhamed",
+    "lastname": "Hujdur",
+    "email": "mhujdur@sarajevogas.ba",
+    "password": "$2b$10$1ve4McyCZtjG1JdBJBsC9eIIG3L.E61rIuqt3Psv1Mv64vtrVHA8i",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Poslovođa odjela za vozila i agragate"
+  },
+  {
+    "firstname": "Muhammed",
+    "lastname": "Halilagic",
+    "email": "muhammed@sarajevogas.ba",
+    "password": "$2b$10$g8BQ81prAgB.7kN3FkFKsOzRGN4b1VXKe2FmiIOL68pOoaQtbLa8W",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći inžinjer za saglasnosti,standarde i normative"
+  },
+  {
+    "firstname": "Muhidin",
+    "lastname": "Brkic",
+    "email": "mbrkic@sarajevogas.ba",
+    "password": "$2b$10$XQXH1iyyXl/KiOFBYFd8qOKg66YsYVAfKrzPjr9p7AhgX594BtFP.",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći inžinjer za projektovanje mreža i priključaka"
+  },
+  {
+    "firstname": "Muratović",
+    "lastname": "Andrea",
+    "email": "andream@sarajevogas.ba",
+    "password": "$2b$10$dB0D7y.CUlX/lqzTbMNoZeaXAnxPiQ27tsrVcFJG1XJTw4eWL//G.",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Tehničar za podršku korisnicima"
+  },
+  {
+    "firstname": "Nadja",
+    "lastname": "Muhovic",
+    "email": "nmuhovic@sarajevogas.ba",
+    "password": "$2b$10$UWUoploYiP7/gW6i9GTCkOAEseIqF.6YF/LRQLA2aVcgz2i7HpSha",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent knjigovođa"
+  },
+  {
+    "firstname": "Naida",
+    "lastname": "Orman-Avdić",
+    "email": "naidaoa@sarajevogas.ba",
+    "password": "$2b$10$Au5cChJc2Dt48XNboN.Mne7mXRhsJRFJOZbylNA2r8GnEDcpwIh/q",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Šef službe za plan, analizu i kontroling"
+  },
+  {
+    "firstname": "Namira",
+    "lastname": "Bogilovic",
+    "email": "namirab@sarajevogas.ba",
+    "password": "$2b$10$rUKNTNQmeRF5LrcF5KuZKetpqT5n..tvLSkWbjT.bf./FEFTF0oPi",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Tehničar za GIS"
+  },
+  {
+    "firstname": "Nasiha",
+    "lastname": "Arslanagic",
+    "email": "nasihaa@sarajevogas.ba",
+    "password": "$2b$10$iZjdSOiL1Sx2K59.VrbGSOf0EOfqoBA9mCOg3QI6poxZSlukwohva",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći inžinjer za podršku korisnicima"
+  },
+  {
+    "firstname": "Nasiha",
+    "lastname": "Salman",
+    "email": "nsalman@sarajevogas.ba",
+    "password": "$2b$10$5CrGVCSVfy6I1XfYwJECn.4utRMsJBlsKGb1NYdmK2IIsOi5IOpAK",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Viši referent za snabdijevanje prirodnim gasom"
+  },
+  {
+    "firstname": "Nedim",
+    "lastname": "Bezdrob",
+    "email": "nedimb@sarajevogas.ba",
+    "password": "$2b$10$ZxEYcHI/C63XDCHvlPM.6O8Q8r3hwD/AdwS6a6PzPBD1Sxu/ku9pu",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za saglasnosti,standarde i normative"
+  },
+  {
+    "firstname": "Nedim",
+    "lastname": "Sakic",
+    "email": "nedims@sarajevogas.ba",
+    "password": "$2b$10$7dqc7YKKcpLdr9ap3mFznu8CJkNna3Ji/Pq4KEm.N13nrkKm1RKBG",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći referent za pravne poslove"
+  },
+  {
+    "firstname": "Nermina",
+    "lastname": "Djugum",
+    "email": "nerminadj@sarajevogas.ba",
+    "password": "$2b$10$l0XALDDyD1nrQIzeqVr42eC75h/ZuhzI0MaNRbhGcc7/zkA9kWHQO",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Šef službe za finansije i računovodstvo"
+  },
+  {
+    "firstname": "Nihad",
+    "lastname": "Bajramovic",
+    "email": "nihad.bajramovic@sarajevogas.ba",
+    "password": "$2b$10$bCjH8Xv9In8qWIQfuxfOOuDcGlEXv/HBaIWxjcoibaCs7UuFK3lTG",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Predsjednik Nadzornog odbora"
+  },
+  {
+    "firstname": "Nihad",
+    "lastname": "Begić",
+    "email": "nbegic@sarajevogas.ba",
+    "password": "$2b$10$9g6xabrDfLrVL9caiSDRjuYyiccSlSLWkBzFxcnkaC8ZEYWSFQyNG",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Pomoćnik direktora za tehničke poslove"
+  },
+  {
+    "firstname": "Nihad",
+    "lastname": "Brutus",
+    "email": "nbrutus@sarajevogas.ba",
+    "password": "$2b$10$Ner1PQhUfqUhI.q1ugchbu4QqEm4jqc8zkIt9iVe20QU23GZnE9ZO",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za održavanje i ugradnju mjerno regulacionih ure"
+  },
+  {
+    "firstname": "Nihad",
+    "lastname": "Subasic",
+    "email": "nsubasic@sarajevogas.ba",
+    "password": "$2b$10$OOy1hLBiH/odad8re60YquAr0APt76ZotYZ0CppDQAmII0RA9smZe",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Šef službe opštih poslova"
+  },
+  {
+    "firstname": "Nusret",
+    "lastname": "Isakovic",
+    "email": "nisakovic@sarajevogas.ba",
+    "password": "$2b$10$Vmh9e8.bzxsGsm.Ul9e3eOgmtV/pT5g8g0MWdVi3KD/ht0zHPf7Dy",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za podršku korisnicima"
+  },
+  {
+    "firstname": "Nusret",
+    "lastname": "Palavra",
+    "email": "npalavra@sarajevogas.ba",
+    "password": "$2b$10$9P1tN1rqRU6rMkaEEB3g/e6AQay9EqcFXeZs3CpAQsqbBtkSFkE1m",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Izvršni direktor za tehničke poslove"
+  },
+  {
+    "firstname": "Nusret",
+    "lastname": "Suvalija",
+    "email": "nusrets@sarajevogas.ba",
+    "password": "$2b$10$LMcEYZHENg00H9qqm05bf.3M0uJSqY643VNjaGzvgxftrUi9Yb8YG",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Inžinjer saradnik za sisteme upravljanja i dokumentaciju"
+  },
+  {
+    "firstname": "Omar",
+    "lastname": "Ahmetović",
+    "email": "omar.ahmetovic@sarajevogas.ba",
+    "password": "$2b$10$BwlhA4.N39dcgKQeBHWVK.OEAfVpT8idCi4h23CHSzz82ra9/PC36",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Podrska ",
+    "lastname": "korisnicima",
+    "email": "podrskakorisnicima@sarajevogas.ba",
+    "password": "$2b$10$7NKo2/utcWmDz4z2zwzZyuDW7LlZ5X22QvQENBvEiBfVP0Sqf1FK2",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Podrška korisnicima"
+  },
+  {
+    "firstname": "Ramiz",
+    "lastname": "Causevic",
+    "email": "ramizc@sarajevogas.ba",
+    "password": "$2b$10$7engtOP/wXJhYvihs4.kJOtFnjUhXzP6Nm4BmJZ4gl9LkNs2x3O5S",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći inžinjer za mjerne instrumente-rukovodilac kvaliteta"
+  },
+  {
+    "firstname": "Rasim",
+    "lastname": "Zulfic",
+    "email": "rasimz@sarajevogas.ba",
+    "password": "$2b$10$Z2gmaUJ3IKiwwFSE9Y6tuuATdKn1cLIWVmqRnCOgMqidajxi69oFu",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Poslovođa glavnog skladišta"
+  },
+  {
+    "firstname": "Sabina",
+    "lastname": "Curevac",
+    "email": "sabinac@sarajevogas.ba",
+    "password": "$2b$10$NiLcqkut8q7dBnBtbiQY7.ghfZRFfgEUoPyHMSqpdXYPNZue47gtC",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za finansijske poslove"
+  },
+  {
+    "firstname": "Sabit",
+    "lastname": "Dedovic",
+    "email": "sabitd@sarajevogas.ba",
+    "password": "$2b$10$.1EhBporPJFh/A2/qRCKy.jdxvElcwcdbF7OO..93K4tTM3.IEuP2",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za katastar"
+  },
+  {
+    "firstname": "Sadzida",
+    "lastname": "Sakic",
+    "email": "sadzidat@sarajevogas.ba",
+    "password": "$2b$10$FI2gLOZpx1tr.7vu.eJIaOaOlrpa8sTtXou8SWJN/w.Kd5E9SLhn2",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Rukovodilac sektora za planiranje, razvoj i projektovanje"
+  },
+  {
+    "firstname": "Samir",
+    "lastname": "Atic",
+    "email": "satic@sarajevogas.ba",
+    "password": "$2b$10$UpBxzCdZxMP6GCLtlzvMBuQcLbpBSoV9SOKgLI/vxkG01MyTKQSia",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za podršku korisnicima"
+  },
+  {
+    "firstname": "Samir",
+    "lastname": "Poljak",
+    "email": "spoljak@sarajevogas.ba",
+    "password": "$2b$10$MjOgRBOhRjjEIFBRKMAMD.xYE9NtaHO8BB/TIVM4c9TsiBhcNXqhG",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za upravne poslove"
+  },
+  {
+    "firstname": "Samra",
+    "lastname": "Mahmic-Fazlic",
+    "email": "samra.m.fazlic@sarajevogas.ba",
+    "password": "$2b$10$/JaIIfZKWo9fj/FZX5315ursPIUTNsxnAr7ii/2gAbDTV2U145EfK",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent knjigovodja"
+  },
+  {
+    "firstname": "Sanela",
+    "lastname": "Karahodzic",
+    "email": "sanelak@sarajevogas.ba",
+    "password": "$2b$10$DMrpdsSJwUJt73rmwji8tu3YXheNAz5lA2k7IGlQ6R3f.8ejRvsyy",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za održavanje i ugradnju mjerno regulacionih ure"
+  },
+  {
+    "firstname": "Sanela",
+    "lastname": "Sporisevic-Kurtovic",
+    "email": "sskurtovic@sarajevogas.ba",
+    "password": "$2b$10$5kW.bZZVKlak3QMxSdKkSukU6WKZJH4NlN5qgXBENJZoz3.rSz6Ui",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Tehničar za održavanje i izgradnju gasnih mreža i priključaka"
+  },
+  {
+    "firstname": "Sanjin",
+    "lastname": "Campara",
+    "email": "scampara@sarajevogas.ba",
+    "password": "$2b$10$iRfm333/9obMaG5MWI7q4OoolL4j9/M6ugG7z8unchjdkEalBSQTa",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za vozila i agregate"
+  },
+  {
+    "firstname": "Racun",
+    "lastname": "Sarajevogas",
+    "email": "racun@sarajevogas.ba",
+    "password": "$2b$10$mHswrkB9xVERQynDCrpv4ObkN9Ng5uOC1Bu0Xv.TUAK9kznmfFPpm",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Šejla",
+    "lastname": "Omerčajić",
+    "email": "sejla.omercajic@sarajevogas.ba",
+    "password": "$2b$10$b0AgeByqnhg5IL5TvO6Kq.sZiS2P7UVuPK7gIF87pvLw4gGoBjeEm",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Selim",
+    "lastname": "Softić",
+    "email": "ssoftic@sarajevogas.ba",
+    "password": "$2b$10$Uyi.yGNvGtQziXQ.HreF7ONJC0xHtP2dFIielrRBdU4RU4BHX8tFG",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Inžinjer saradnik za puštanje u pogon ugi i očitanje"
+  },
+  {
+    "firstname": "Selma",
+    "lastname": "Dzamalija",
+    "email": "selmadz@sarajevogas.ba",
+    "password": "$2b$10$WKmb2O.UHAAfsPWdc4pjiulciBxwQdka5Q8HPy9IYIvpVFyiMjkyK",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za plan, analizu i kontroling"
+  },
+  {
+    "firstname": "Semir",
+    "lastname": "Aljovic",
+    "email": "semira@sarajevogas.ba",
+    "password": "$2b$10$4tFnxF5f6lc4TJpPhebIwuLC.KJiWEFtqKqhUYM.9/pCKcTvCcMKC",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za snabdijevanje prirodnim gasom"
+  },
+  {
+    "firstname": "Senad",
+    "lastname": "Delija",
+    "email": "sdelija@sarajevogas.ba",
+    "password": "$2b$10$F9j1pHVHSRr9TzuW4WPu8uFDgIZfpI6s4QAofRqwH1JhLITCfZDGu",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent za upravne poslove"
+  },
+  {
+    "firstname": "Senad",
+    "lastname": "Hadziahmetovic",
+    "email": "senad@sarajevogas.ba",
+    "password": "$2b$10$p7YpZvuEvpwpRWTW..R8rOzssEtHA9d0G92g.rNTSAhZFMwX1e9Vm",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za održavanje i izgradnju sistema jake  struje"
+  },
+  {
+    "firstname": "Senad",
+    "lastname": "Handžić",
+    "email": "shandzic@sarajevogas.ba",
+    "password": "$2b$10$bheBnlkNAdsbaKU6XIWteOk4DAnQiOIwS5SBuxZdUC4kYVRR3Z0ei",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Rukovodilac sektora za gradnju, pogon i održavanje"
+  },
+  {
+    "firstname": "Senad",
+    "lastname": "Muzur",
+    "email": "senadm@sarajevogas.ba",
+    "password": "$2b$10$PMS8TJcI2E.EXiMz6ysR7OZkdgxfPfOSEAnrX.Uc26SPXStyoaf9u",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za projektovanje mreža"
+  },
+  {
+    "firstname": "Senad",
+    "lastname": "Pasic",
+    "email": "senadp@sarajevogas.ba",
+    "password": "$2b$10$GeI4Z2/2IydYXn9zDM4lgO7tSnMWoBZPJyqeEw15ykiboWvEBxrDW",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent za snabdijevanje prirodnim gasom"
+  },
+  {
+    "firstname": "Senad",
+    "lastname": "Rozajac",
+    "email": "srozajac@sarajevogas.ba",
+    "password": "$2b$10$NDZ2XH84VF/hsyPtL90zQu8Xp6PHpkZFqIo0KYjYsuSzx3NCKPbei",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Tehničar za projektovanje mreža i priključaka"
+  },
+  {
+    "firstname": "Senada",
+    "lastname": "Surkovic",
+    "email": "senadas@sarajevogas.ba",
+    "password": "$2b$10$zMTd/hFxXmi4btjltz9fYu63JMIxsaMhgAmc5Bflzamcf6agq5BMe",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Glavni referent likvidator"
+  },
+  {
+    "firstname": "Suad",
+    "lastname": "Kolja",
+    "email": "skolja@sarajevogas.ba",
+    "password": "$2b$10$l3Kp3ghLhw/S4BsxZIiQZOeJOuvH/LSIFmQ5AVltF.dkkwU2S4cgy",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Tehničar za održavanje i ugradnju mjerno regulacionih uređaja"
+  },
+  {
+    "firstname": "Suada",
+    "lastname": "Seperovic",
+    "email": "suadas@sarajevogas.ba",
+    "password": "$2b$10$JvzZg5s.3kXv2.TDSuD6yuxeWgicMAiqtP.Z6K3D2z36kATG5FL6G",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent porto blagajnik"
+  },
+  {
+    "firstname": "Tale",
+    "lastname": "Causevic",
+    "email": "tale@sarajevogas.ba",
+    "password": "$2b$10$dVWm1L7s9.1HA5bhxYicHuDbDafY3TN7dEdd4TpIANRkpQNQEU9Oq",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Inžinjer za  katastar"
+  },
+  {
+    "firstname": "Tarik",
+    "lastname": "Kapetanovic",
+    "email": "tarik.kapetanovic@sarajevogas.ba",
+    "password": "$2b$10$CjgBwljeaXKNCxPLmEATBuYdJoyT5Wf.kHEAG9fcWaTTXZTa3K3p2",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Strucni saradnik za informisanje"
+  },
+  {
+    "firstname": "Tarik",
+    "lastname": "Kavazović",
+    "email": "tarik.kavazovic@sarajevogas.ba",
+    "password": "$2b$10$ac6AoOAVfDrtmXUKbte.FOMNWAa3GqLM16CfaDo.k7vjR8dODrEuy",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Vedad",
+    "lastname": "Hadzibegic",
+    "email": "vedadh@sarajevogas.ba",
+    "password": "$2b$10$p8VUOWUbR/ZD4R1ujzrK6.7Z.8CfQCXuDCTr9gVPOBOEiJxihizJu",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći referent za kadrovske poslove"
+  },
+  {
+    "firstname": "Vedran",
+    "lastname": "Pilić",
+    "email": "vedranp@sarajevogas.ba",
+    "password": "$2b$10$fWQqO9iUHjGDgwUEr7GwOunrXzq7sy5jNKg.W7j9FEH6ZHNenLO9W",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Tehničar za puštanje u pogon ugi i očitanje"
+  },
+  {
+    "firstname": "Velid",
+    "lastname": "Hatic",
+    "email": "velidh@sarajevogas.ba",
+    "password": "$2b$10$vJWTOT1xcfoNOm7AT7/Tiu5EUdrPBp8topcXCYQwHSbv52MZ7/y8m",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Službenik za javne nabavke"
+  },
+  {
+    "firstname": "Velid",
+    "lastname": "Sinanovic",
+    "email": "vsinanovic@sarajevogas.ba",
+    "password": "$2b$10$DUR/oTBbUfcNdpvVO4tn3.IFtMPX2Vdfxem5EyMz9W0OnDeYFK4my",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Šef službe za projektovanje i saglasnosti"
+  },
+  {
+    "firstname": "Vildana",
+    "lastname": "Prljaca",
+    "email": "vildanap@sarajevogas.ba",
+    "password": "$2b$10$2JICtpZ7h8OWt.OSXRUxB.hTHRtwxtefisHNzayUw1mHU0GOwyuee",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent knjigovođa"
+  },
+  {
+    "firstname": "Zlatko",
+    "lastname": "Čular",
+    "email": "zlatkos@sarajevogas.ba",
+    "password": "$2b$10$6EhjLjOzQo.9qnJbljnTceL6r8INJL/qFqrstg.5ms05YWXkfPIJK",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Glavni referent protokola"
+  },
+  {
+    "firstname": "Zlatko",
+    "lastname": "Doric",
+    "email": "zdoric@sarajevogas.ba",
+    "password": "$2b$10$BTWOnGt5VUqRYgtOD1TEzOCA2km4RJt8k1W2ec6k/8uQkX/mS.TzG",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent za katastar"
+  },
+  {
+    "firstname": "Zlatko",
+    "lastname": "Mesanovic",
+    "email": "zmesanovic@sarajevogas.ba",
+    "password": "$2b$10$c5.cdX15AsUac068OeLHCOyRnxwzFEfAzZsDQgPsNqdQyS39Hw/.i",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Poslovođa - operater za mjerne instrumenate"
+  },
+  {
+    "firstname": "Zlatko",
+    "lastname": "Skufca",
+    "email": "zskufca@sarajevogas.ba",
+    "password": "$2b$10$BQso/DcP28dptCJknPFQEeGk1LeOjeleX8kfw56BT099i2iK6wka2",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći inžinjer zaštite na radu"
+  },
+  {
+    "firstname": "Admir",
+    "lastname": "Sehic",
+    "email": "asehic@sarajevogas.ba",
+    "password": "$2b$10$jXeTvN1mSlYgBmuLuyKnbek1wYQkMDH6Mpq22OfHDvT8nNjApb0W2",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Tehničar za mjerenje"
+  },
+  {
+    "firstname": "Aida",
+    "lastname": "Babic",
+    "email": "aidab@sarajevogas.ba",
+    "password": "$2b$10$EaDEhubQEUuzc60sLULCueQoW7OXc7cGqDDF3Zfd4YN22JUPBD9R2",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent knjigovođa"
+  },
+  {
+    "firstname": "Aida",
+    "lastname": "Isakovic-Avdic",
+    "email": "aidaia@sarajevogas.ba",
+    "password": "$2b$10$nQg13CeSp26pfskaWNIjQeiLDeXx0rnE1.ipTDvadWBsVYzDVr4Ie",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za utuženja kupaca"
+  },
+  {
+    "firstname": "Aiša",
+    "lastname": "Ćenanović",
+    "email": "acenanovic@sarajevogas.ba",
+    "password": "$2b$10$7H1leDV.WSKGT12NDV5MIejZo.Vs4YPBgoKmoPNfR0KWKvM5g6pFm",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći inžinjer za mjerenje"
+  },
+  {
+    "firstname": "Ajla",
+    "lastname": "Hejub",
+    "email": "ajlas@sarajevogas.ba",
+    "password": "$2b$10$fU6UtfB3mbeTCq5s/7oQ.O/.K7zxbyIKMv49OKWnZJhrrlI.tJnxq",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za računovodstvene poslove"
+  },
+  {
+    "firstname": "Albin",
+    "lastname": "Serifovic",
+    "email": "albins@sarajevogas.ba",
+    "password": "$2b$10$lFKDv32M6KvlFBNMPVV44Om9U6eRgQtTwY8zSuYswfCpnAGcwBdGG",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći majstor za održavanje i izgradnju gasnih mreža i priključ"
+  },
+  {
+    "firstname": "Aldin",
+    "lastname": "Radonja",
+    "email": "aldinradonja@sarajevogas.ba",
+    "password": "$2b$10$/xXCJQzJUMWDUXv6HlQ2XeOrJV34.1TjmwrlrYRD4yWIh7m00uYVK",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći referent za pravne poslove"
+  },
+  {
+    "firstname": "Aldin",
+    "lastname": "Ramic",
+    "email": "aramic@sarajevogas.ba",
+    "password": "$2b$10$XB9RWmojWylXXlYcnRnHLOjxCIp9YEdR.l9adz8Voj1ce1TUBnkpK",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za GIS"
+  },
+  {
+    "firstname": "Alen",
+    "lastname": "Omeragic",
+    "email": "aomeragic@sarajevogas.ba",
+    "password": "$2b$10$hBKbw40ZKyL2gBqNTHyBtuDfXbyPGTtAf0G0gSub.qhDMPrGP0DzK",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za podršku korisnicima"
+  },
+  {
+    "firstname": "Alija",
+    "lastname": "Vuk",
+    "email": "alijav@sarajevogas.ba",
+    "password": "$2b$10$iX2GYubd0lFe09d60Ygw/uw3qVU/0tagpNnbFO6V8CBdJjIDFXL4O",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći Inžinjer za detekciju na propusnost gasnog sistema"
+  },
+  {
+    "firstname": "Alma",
+    "lastname": "Dzaka",
+    "email": "almadz@sarajevogas.ba",
+    "password": "$2b$10$aeiC4TsAAeBJny149mfg6u6jOJOBPAKeZZPipcNZadGWwv80cJq96",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći referent za plan, analizu i kontroling"
+  },
+  {
+    "firstname": "Almir",
+    "lastname": "Barina",
+    "email": "almir.barina@sarajevogas.ba",
+    "password": "$2b$10$8PlmRnfAlqyL/bc9/PrsqO4oiNFS5Ysasmio8vaFyGiB.KHr2x5iq",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent na poslovima zaštite"
+  },
+  {
+    "firstname": "Altijana",
+    "lastname": "Tunja",
+    "email": "altijanat@sarajevogas.ba",
+    "password": "$2b$10$IGiu.z9/coWhr8x7f88r3urT9UdZqrEtuLdelqdHrZzengIoEcsDa",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Interni revizor"
+  },
+  {
+    "firstname": "Amela",
+    "lastname": "Jelic",
+    "email": "amela.jelic@sarajevogas.ba",
+    "password": "$2b$10$ZbGmMqpDrXFFJAu/G3IO3enfmi4kkF4iPuj88QhYgXxAYbUeq3hH2",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent porto blagajnik"
+  },
+  {
+    "firstname": "Amela",
+    "lastname": "Sinanović",
+    "email": "amelas@sarajevogas.ba",
+    "password": "$2b$10$kXqLtx08d9as6dZ3Juoa/OKy4gA9jf5XS6zah5irVVvfL7W37419u",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent porto blagajnik"
+  },
+  {
+    "firstname": "Amela",
+    "lastname": "Tatarevic",
+    "email": "atatarevic@sarajevogas.ba",
+    "password": "$2b$10$mMAOpmbC7z/Z8jDVHc1JLuYVQjosaK5Qmdr1sGgrj9n2cVkjmGL7y",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za kadrovske poslove"
+  },
+  {
+    "firstname": "Amil",
+    "lastname": "Kamerić",
+    "email": "amilk@sarajevogas.ba",
+    "password": "$2b$10$GILpNhrgQQHKLEN7spo/m.NVoM1OmDcQuQuHDwjLr22A3mmxYba3i",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Tehničar za katastar"
+  },
+  {
+    "firstname": "Amir",
+    "lastname": "Bahtic",
+    "email": "abahtic@sarajevogas.ba",
+    "password": "$2b$10$BDOf0PwgAk7OAsfuf4WvNOPXtyxWkdSgcvuIs4xP5WBuv2rV/2uZ.",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Tehničar za detekciju na propusnost gasnog sistema"
+  },
+  {
+    "firstname": "Amir",
+    "lastname": "Beganović",
+    "email": "amirb@sarajevogas.ba",
+    "password": "$2b$10$o3MNXGeAS3qupsMKPnoStu7c4NVXum.vTm1JBB6GglBBMIqblMSVy",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći operater za mjerne instrumente"
+  },
+  {
+    "firstname": "Amir",
+    "lastname": "Dzinic",
+    "email": "adzinic@sarajevogas.ba",
+    "password": "$2b$10$a/ofMwdXAqy.f2OZR1T73.pqizDikjrTQkttPuUTORFeNzODB2KtS",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za projektovanje priključaka"
+  },
+  {
+    "firstname": "Amir",
+    "lastname": "Sarajlic",
+    "email": "asarajlic@sarajevogas.ba",
+    "password": "$2b$10$WQh8Wrayu/4vkmizrH8BMOkxaE7B6aqsU/bAmpmyAFsRbNuV4xtp.",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Poslovođa za održavanje i izgradnju sistema jake i slabe struje"
+  },
+  {
+    "firstname": "Amira",
+    "lastname": "Tanovic",
+    "email": "atanovic@sarajevogas.ba",
+    "password": "$2b$10$tSui061tLaipSBb7vOfmjO/czLbBO8qzSei//3hyuFTfqO1kVzM0q",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za kadrovske poslove"
+  },
+  {
+    "firstname": "Ammar",
+    "lastname": "Kulo",
+    "email": "ammark@sarajevogas.ba",
+    "password": "$2b$10$kaPTeLnszV9FeUiKuDUKhevHn.bg4NiyCsi.05aYSI5Cc/UP2HFjm",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći referent za računovodstvene poslove"
+  },
+  {
+    "firstname": "Amra",
+    "lastname": "Becirovic",
+    "email": "amrab@sarajevogas.ba",
+    "password": "$2b$10$6f4eFEhhZ/5/6ImEVV4kCe3FxbvGqKWwOBJ8owR.CKWhSgSnmRYyW",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za računovodstvene poslove"
+  },
+  {
+    "firstname": "Amra",
+    "lastname": "Čankušić",
+    "email": "amrac@sarajevogas.ba",
+    "password": "$2b$10$1pxbY46IHicGKN3i7XzCA.twClKAGtilZ97BrOiCIOkOJpHNhYFOO",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent porto blagajnik"
+  },
+  {
+    "firstname": "Amra",
+    "lastname": "Topalbecirevic",
+    "email": "amrat@sarajevogas.ba",
+    "password": "$2b$10$S0qHAIQzQpxG12MDcI0lCOvDEFb0oMg/N8PKbEwIfNNU3UZoEG99a",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Strucni saradnik za informisanje"
+  },
+  {
+    "firstname": "Ana",
+    "lastname": "Gutovic",
+    "email": "anagutovic@sarajevogas.ba",
+    "password": "$2b$10$ZE.uIUfeT7d.xQtJFt/OJewIqHBNt6UDb7OuvySSFizcLEEGaQxWW",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Administrator"
+  },
+  {
+    "firstname": "Andrea",
+    "lastname": "Vuckovic",
+    "email": "andreav@sarajevogas.ba",
+    "password": "$2b$10$FvThdhqf0HG2NBoZVan6gu3HA1P.ZbD3ukANsYOrLU8efEP/sMAi2",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Tehničar za puštanje u pogon ugi i očitanje"
+  },
+  {
+    "firstname": "Anela",
+    "lastname": "Kremo",
+    "email": "anelas@sarajevogas.ba",
+    "password": "$2b$10$r9jdEnCmRVJroYFni/yPfuldL9i33qo3HJ9pp6yqI66owyVnKeSDK",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za utuženja kupaca"
+  },
+  {
+    "firstname": "Arijana",
+    "lastname": "Mahović Suljagić",
+    "email": "arijanam@sarajevogas.ba",
+    "password": "$2b$10$c75qEYHqEVyDf762M5SAgO9pvThr3lqItwQXUlDXwfh2gvWmc5826",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći referent za ugovaranje prirodnog gasa"
+  },
+  {
+    "firstname": "Asmira",
+    "lastname": "Grahic",
+    "email": "asmirag@sarajevogas.ba",
+    "password": "$2b$10$T3JCIWcqJF51FPP3lAmLIe0TmEfTUto/dQVYKCfVHPxPavBqERD2O",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Tehničar za katastar"
+  },
+  {
+    "firstname": "Azra",
+    "lastname": "Pindzo",
+    "email": "azrap@sarajevogas.ba",
+    "password": "$2b$10$99aZoelWu3.HHQt6z0fmD.l4JnkyO3nBp5t4XSakj.T5LfPIpjGa.",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Tehničar za puštanje u pogon ugi i očitanje"
+  },
+  {
+    "firstname": "Azra",
+    "lastname": "Šehović",
+    "email": "asehovic@sarajevogas.ba",
+    "password": "$2b$10$5GTeaJ/VH/TDaqzUHFfmUeQd9iERgRigYgm8PrQFLaAxOVuqSQBWy",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za upravne poslove"
+  },
+  {
+    "firstname": "Belma",
+    "lastname": "Dzambic",
+    "email": "belmadz@sarajevogas.ba",
+    "password": "$2b$10$AFXnos6lGMSZo2RYlmU2sOAiw1/9DQJKRnEgX80Bhr6HVNiF6rUUy",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za projektovanje mreža"
+  },
+  {
+    "firstname": "Binasa",
+    "lastname": "Sahman",
+    "email": "binasas@sarajevogas.ba",
+    "password": "$2b$10$Y6UTQyBwprqGapNLa1wZ5uLIaWnyY89hkWVwCrttLG5nELSw12bAi",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Glavni referent knjigovođa"
+  },
+  {
+    "firstname": "Cazim",
+    "lastname": "Sokolovic",
+    "email": "cazims@sarajevogas.ba",
+    "password": "$2b$10$g2p/MiD0h2uTnfKGMRMo3eFrY90gPNRUCtA9STjtl6C2vSGKnF9hm",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Glavni referent arhive"
+  },
+  {
+    "firstname": "Dino",
+    "lastname": "Solakovic",
+    "email": "dsolakovic@sarajevogas.ba",
+    "password": "$2b$10$II9kYZNclV.USt6Y4J8LS.ENcgoGHh9HrZ7U4d4jrO/G5wMip9zKy",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Glavni referent blagajnik"
+  },
+  {
+    "firstname": "Dispeceri",
+    "lastname": "Sarajevogas",
+    "email": "dispeceri@sarajevogas.ba",
+    "password": "$2b$10$Eu3J.sJYt7DygiP4Jbg.pOE9x.4QCCEKhv42asuMalUD8PHQj3.gm",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Dzenan",
+    "lastname": "Memisevic",
+    "email": "dzmemisevic@sarajevogas.ba",
+    "password": "$2b$10$Jk2Q5g5Q7uhCi1ubPkdQTOBUTgD4gyltd4s8LkhS1azPc/d2Vb/X6",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za servisiranje vozila i agregata"
+  },
+  {
+    "firstname": "Dzenana",
+    "lastname": "Basic",
+    "email": "basicdz@sarajevogas.ba",
+    "password": "$2b$10$yJ61dS5o2bPS4a5rF7VbGOty4xnFdviiX4NOf4hqDfA.YlqBnpdQO",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent knjigovođa"
+  },
+  {
+    "firstname": "Dzenana",
+    "lastname": "Zukan",
+    "email": "zdzenana@sarajevogas.ba",
+    "password": "$2b$10$mTmZR.fZj882FlxHlXcr6ebQKnK1VmsPf7/Rdg82k6uy3pjoLY56q",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći referent za plan, analizu i kontroling"
+  },
+  {
+    "firstname": "e-",
+    "lastname": "racun",
+    "email": "e-racun@sarajevogas.ba",
+    "password": "$2b$10$NhhEmlv1yXWtR66chHk4Tesxk89Gvt9yscdRXpnbvWmIhK0RtdJPu",
+    "role": "User",
+    "sector": null,
+    "pozicija": "e-racun"
+  },
+  {
+    "firstname": "Edhem",
+    "lastname": "Kukavica",
+    "email": "edhemk@sarajevogas.ba",
+    "password": "$2b$10$X8OhOuosj4ViCc4Ld9NBgugtkmO6ME4btexKu9Qn2olmNDPce8oq.",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za analize,tarife i izvještavanje"
+  },
+  {
+    "firstname": "Edin",
+    "lastname": "Babic",
+    "email": "ebabic@sarajevogas.ba",
+    "password": "$2b$10$DtOo.zSFos5y4PYWbm74qeXsTERORULQPqXxnMZDK7y3LP.J2cjp.",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar tehničke zaštite"
+  },
+  {
+    "firstname": "Edin",
+    "lastname": "Celik",
+    "email": "edinc@sarajevogas.ba",
+    "password": "$2b$10$6YUTjgx9yidchHq9mD..geeDE8hkFHgQONozlXjW6KS/.DLq1CaWS",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Menadžer kvaliteta"
+  },
+  {
+    "firstname": "Edin",
+    "lastname": "Preldžić",
+    "email": "epreldzic@sarajevogas.ba",
+    "password": "$2b$10$cTtaA7qeLazi.omIxfWQ7eYR6RfzvKTyWr8ReJ6GYtXAD1dimaR42",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za detekciju na propusnost gasnog sistema"
+  },
+  {
+    "firstname": "Edin",
+    "lastname": "Ramic",
+    "email": "eramic@sarajevogas.ba",
+    "password": "$2b$10$hdkPOrc2FTwyHKW7i6RjXeP.XbgSIhhQIxDecRTQiHwOF3MkkIWbS",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći operater  za mjerne instrumenate"
+  },
+  {
+    "firstname": "Edin",
+    "lastname": "Sehic",
+    "email": "edinsehic@sarajevogas.ba",
+    "password": "$2b$10$OPDI98v8gDQKCvgW5omnR.zUCnzizN8Qr3p3uSl/pJzgeykuxL3LW",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Poslovođa za održavanje i izgradnju gasnih mreža i priključaka"
+  },
+  {
+    "firstname": "Eldar",
+    "lastname": "Djipa",
+    "email": "eldardjipa@sarajevogas.ba",
+    "password": "$2b$10$ccYIn5DWjQPt5QTUiFdk3OpUY66qayELm1mNIIQklS82ujbxDqYNa",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Tehničar za podršku korisnicima"
+  },
+  {
+    "firstname": "Elmedita",
+    "lastname": "Kadić",
+    "email": "ekadic@sarajevogas.ba",
+    "password": "$2b$10$fV2XDQdrWnXw1oj0.58TS.7bOC.lfl6.xoakHDtGzcoEBohNgYNu6",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Voditelj odjela za internu reviziju"
+  },
+  {
+    "firstname": "Elvedin",
+    "lastname": "Bjelic",
+    "email": "ebjelic@sarajevogas.ba",
+    "password": "$2b$10$XTJpscyC8K37I.2iNvRrm.ZJL6Qm7TB.J.SxbARczK4JiGUuBTbp6",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Glavni referent blagajnik"
+  },
+  {
+    "firstname": "Elvedin",
+    "lastname": "Humić",
+    "email": "ehumic@sarajevogas.ba",
+    "password": "$2b$10$5Fridcl7qwSt8pNeT6x9.epBgynJzCgakrwQGgHCNzTWLf8w6OXZu",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći referent za obračun i fakturisanje prirodnog gasa"
+  },
+  {
+    "firstname": "Elvedina",
+    "lastname": "Ahmetovic",
+    "email": "elvedinaa@sarajevogas.ba",
+    "password": "$2b$10$jxmXXeCxKxjv22qxmcXZ7eAui/l3ceaL0cm8tDrpo8mUlIY9dKHve",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Šef službe za snabdijevanje prirodnim gasom"
+  },
+  {
+    "firstname": "Elvir",
+    "lastname": "Salihovic",
+    "email": "elvir.salihovic@sarajevogas.ba",
+    "password": "$2b$10$hPirtd5R.rxwcbprLJquG.it5cYnte8sZBDHG2V.TTLU8gfHqeMcm",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za prodaju i nabavku"
+  },
+  {
+    "firstname": "Elvir",
+    "lastname": "Sehic",
+    "email": "esehic@sarajevogas.ba",
+    "password": "$2b$10$4UVgGRJQnJTJbofVVDfaO.SYcn1WAR9.PTZOXD3hc4ipYZ6AbzHWq",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći inžinjer za održavanje i ugradnju mjerno regulacionih ure"
+  },
+  {
+    "firstname": "Elvir",
+    "lastname": "Sinanović",
+    "email": "esinanovic@sarajevogas.ba",
+    "password": "$2b$10$7xFLWKuyNO8j6uE6eOHmJec1v/TlO1h9BsnY33FuS3/htTWszQS.i",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Šef službe za  gis i katastar"
+  },
+  {
+    "firstname": "Elvir",
+    "lastname": "Zlatic",
+    "email": "ezlatic@sarajevogas.ba",
+    "password": "$2b$10$25iw5T7/sq5D3FUc14kAnuLSkWOqml4PehUN3LmLYV2lE.8IvUkOu",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Šef službe za mjerenje i puštanje u pogon"
+  },
+  {
+    "firstname": "Emina",
+    "lastname": "Selimović",
+    "email": "emina.selimovic@sarajevogas.ba",
+    "password": "$2b$10$1cSP.YQD2DjR.bl5R4fikuwJQoi8dXzhhV8F.MKu30clY1N9y/nva",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Poslovni sekretar Direkcije"
+  },
+  {
+    "firstname": "Emina",
+    "lastname": "Suljagić",
+    "email": "emina.suljagic@sarajevogas.ba",
+    "password": "$2b$10$rxDlKQsHoRR99bQQKfD6PeAXAxYr4Ul.25tH8kwzatGHZcxu2iIGS",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Emira",
+    "lastname": "Kurtovic",
+    "email": "ekurtovic@sarajevogas.ba",
+    "password": "$2b$10$DKKGHo0mLD30j1ys0pgxOOjKmeCuTNKzrTUWIO1yCiQwNVQB4fRh6",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Administrator SGPO"
+  },
+  {
+    "firstname": "Ernin",
+    "lastname": "Alisic",
+    "email": "ernin.alisic@sarajevogas.ba",
+    "password": "$2b$10$dqpwFAq6HverR5S1pNDCCuFIRzOf2/Yc6S5xoe13Ljl5YFsA7mgXa",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Šef Službe za nadzor i upravljanje gasnim sistemom"
+  },
+  {
+    "firstname": "Faris",
+    "lastname": "Doric",
+    "email": "farisd@sarajevogas.ba",
+    "password": "$2b$10$9ccOFlBJwzBW.rCO1RhwJudB3ZQ3n8RF1HzRyK8hPKinN0L559fF2",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Skladištar"
+  },
+  {
+    "firstname": "Fudo",
+    "lastname": "Djino",
+    "email": "fudodj@sarajevogas.ba",
+    "password": "$2b$10$8WIbXIWwe/nQxxpEPKWnHODVLCnQWw/9nyznjanKsjc3w2HF3X8Iy",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći majstor - alatničar"
+  },
+  {
+    "firstname": "Hajdina",
+    "lastname": "Skufca",
+    "email": "hskufca@sarajevogas.ba",
+    "password": "$2b$10$ALwnUBa.OXt28dBC25cR7eKoSMBALlQvyh1CoTPUz0dXpNDmb2VLq",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći inžinjer za puštanje u pogon ugi i očitanje"
+  },
+  {
+    "firstname": "Hajrudin",
+    "lastname": "Covic",
+    "email": "hajrudinc@sarajevogas.ba",
+    "password": "$2b$10$t9JZn2qz3gS9vAu92rniPue9iMIdYnuUIJZgN1ELKJpPsrmf7kP/6",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar  za mjerenje"
+  },
+  {
+    "firstname": "Hamed",
+    "lastname": "Causevic",
+    "email": "hamed.causevic@sarajevogas.ba",
+    "password": "$2b$10$B7guXiiisJCwpmO17/4peO34wFE1LhNa0SnX1e8UtYx.th8uPHUu2",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za održavanje i izgradnju gasnih mreža i priklju"
+  },
+  {
+    "firstname": "Hamza",
+    "lastname": "Dzabija",
+    "email": "hdzabija@sarajevogas.ba",
+    "password": "$2b$10$ft7GhMDMFKUs6pANKgvubu8AprUteo8SrDxU4ZZgUglL8q4JvFK7K",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Tehničar za projektovanje mreža i priključaka"
+  },
+  {
+    "firstname": "Haris",
+    "lastname": "Delic",
+    "email": "harisd@sarajevogas.ba",
+    "password": "$2b$10$IjAtB95Mw0zlgmCGty/MHeiwTZrvU.pCX4qu3v5br10XnxydB65vu",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Šef službe sigurnosti"
+  },
+  {
+    "firstname": "Husein",
+    "lastname": "Delalic",
+    "email": "hdelalic@sarajevogas.ba",
+    "password": "$2b$10$VIWghcRxajZp8jgtU7ojFufm35av49QhovO3WR2IhLgwXYsGIeGaW",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći inžinjer za održavanje i izgradnju sistema jake i slabe s"
+  },
+  {
+    "firstname": "Ibrahim",
+    "lastname": "Busuladzic",
+    "email": "ibusuladzic@sarajevogas.ba",
+    "password": "$2b$10$40i6qEZQPi67Ag6qy8mZ1O.a1P6zCG79P/0mmws7DAiqmEKFo9dF2",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Tehnički rukovodilac laboratorija za mjerne instrumente"
+  },
+  {
+    "firstname": "Indira",
+    "lastname": "Skopo",
+    "email": "indiras@sarajevogas.ba",
+    "password": "$2b$10$SAaMKy3RuKDS6o5iXJDPFeQVJKVnVBKe4IxyZ9iZZkV47jUfN5ZJq",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Viši finansijski referent za  utuženja kupaca"
+  },
+  {
+    "firstname": "Izet",
+    "lastname": "Sabljica",
+    "email": "izets@sarajevogas.ba",
+    "password": "$2b$10$.ZR38gJc6uzIyYmHAQ1VJeolywcVbWEmMSBYvvWymg4nApBDzK/.u",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za projektovanje mreža"
+  },
+  {
+    "firstname": "Jasko",
+    "lastname": "Kočić",
+    "email": "jaskok@sarajevogas.ba",
+    "password": "$2b$10$LszJH88VXcmqyqMMpet4/.uxxfS4eO474nYG.M.vp2UWMEul2U51K",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za održavanje i izgradnju gasnih mreža i priklju"
+  },
+  {
+    "firstname": "Jasmin",
+    "lastname": "Bandic",
+    "email": "jbandic@sarajevogas.ba",
+    "password": "$2b$10$TREwYjCs0BuOnPQSAcsTVOKF18ldPgBcd6PHgq5a.vS7iwQH5NjiG",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći inžinjer za održavanje i izgradnju gasnih mreža i priklju"
+  },
+  {
+    "firstname": "Jasmin",
+    "lastname": "Celjo",
+    "email": "jceljo@sarajevogas.ba",
+    "password": "$2b$10$2ECcLWK6ERrpwLrsm2COTO913e2sQLoF6RT1H65bVJjNy.6/egcIS",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent za snabdijevanje kompresovanim prirodnim gasom"
+  },
+  {
+    "firstname": "Jasmin",
+    "lastname": "Karić",
+    "email": "jasmink@sarajevogas.ba",
+    "password": "$2b$10$zB93iLIygbTbTSyqNtTNU.OHOOU0ayRTzilb3FA/i/kde0uRSURWi",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za održavanje i izgradnju gasnih mreža i priklju"
+  },
+  {
+    "firstname": "Kenan",
+    "lastname": "Gavranovic",
+    "email": "kenang@sarajevogas.ba",
+    "password": "$2b$10$r4b/cfmW98b9Cj800PhUwuU7cQWaMaVshJ.S2CuCb/J9bIpW.pZym",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za zaštitu ljudi i imovine"
+  },
+  {
+    "firstname": "Kerima",
+    "lastname": "Kesan",
+    "email": "kerimak@sarajevogas.ba",
+    "password": "$2b$10$d43A/5/3yxAuI4vsDBxIfeNLqforzSSg95IyPs75zTcs8U.EzDA.6",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za podršku korisnicima"
+  },
+  {
+    "firstname": "Lejla",
+    "lastname": "Bešlić",
+    "email": "lejla.beslic@sarajevogas.ba",
+    "password": "$2b$10$TygFoRTY2CNdQcFPfGOlm.LHU8x6bkpgR/Y1Na0LIe3.KM8Q5PkVu",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Viši referent za plan, analizu i kontroling"
+  },
+  {
+    "firstname": "Marina",
+    "lastname": "Malicbegovic",
+    "email": "marinam@sarajevogas.ba",
+    "password": "$2b$10$cAmCPYpQQ5iFwIfRVxoiCuHzvSKI7SN/L71jqHqkPc0jmF.5xtK6u",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Glavni referent za snabdijevanje prirodnim gasom"
+  },
+  {
+    "firstname": "Medin",
+    "lastname": "Poturak",
+    "email": "medinp@sarajevogas.ba",
+    "password": "$2b$10$BQqEwYx8yv4kKhV58Bl6xec2unjK9sCvx8j9yIVUaxn60z8seUzTC",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za održavanje i izgradnju gasnih mreža i priklju"
+  },
+  {
+    "firstname": "Meliha",
+    "lastname": "Sabljica",
+    "email": "melihas@sarajevogas.ba",
+    "password": "$2b$10$rcq/x7DuVgOH.QeilNa79ORZLfN.AUMjRPTM9iTGuTpUWN1oWhFl.",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za podršku korisnicima"
+  },
+  {
+    "firstname": "Mersiha",
+    "lastname": "Mulic",
+    "email": "mersiha.mulic@sarajevogas.ba",
+    "password": "$2b$10$Nje0Wk51f8XScJGQNVxyCu1CsEQft8wTjCBHK6PFrprTMiZan4Dpi",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Glavni referent blagajnik"
+  },
+  {
+    "firstname": "Mirsad",
+    "lastname": "Softic",
+    "email": "mirsads@sarajevogas.ba",
+    "password": "$2b$10$xcmY16UTnYXOmEL1E0PGJuuCQ3kQ0bDhCous4IdPWUy3ZoAkg6dGO",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar zaštite od požara"
+  },
+  {
+    "firstname": "Nadzorni",
+    "lastname": "Odbor",
+    "email": "nadzorni.odbor@sarajevogas.ba",
+    "password": "$2b$10$9QLZEfENhWOE3RzOhGmLG.NsaP/COidBKbiyjMEmFmjfUoEbXV/au",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Namik",
+    "lastname": "Srna",
+    "email": "namik.srna@sarajevogas.ba",
+    "password": "$2b$10$0r9Gvy2CqLCVgVChc91u0OAknHRpBG72On782MjMasew3KN8UlqUy",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Nasir",
+    "lastname": "Repuh",
+    "email": "nasir.repuh@sarajevogas.ba",
+    "password": "$2b$10$oyhXPF/BOZA9rV9V.b454.LoBwR/M5cANQWQPRuY/wDcMZpkY8deq",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar fizičke zaštite"
+  },
+  {
+    "firstname": "Nedim",
+    "lastname": "Bajramovic",
+    "email": "nbajramovic@sarajevogas.ba",
+    "password": "$2b$10$t93ESAJm2PEuAi5mJjarrOr2B91HWwsAqlbV3q2K16wCi4Hfbu.m6",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Poslovođa za snabdijevanje kompresovanim prirodnim gasom"
+  },
+  {
+    "firstname": "Sacir",
+    "lastname": "Korjenic",
+    "email": "sacir.korjenic@sarajevogas.ba",
+    "password": "$2b$10$iDcOJWkm1RBuN6DHGfNkNu3szawzBvMpf6XcbOILOzwV9CUSj.O1m",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Sarah",
+    "lastname": "Kolja",
+    "email": "kolja.sarah@sarajevogas.ba",
+    "password": "$2b$10$ygLaiR1RkTJBdS0DhSHh4.geLW3YLlHWDWC..klriWMBX83d4zNp6",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Slaba",
+    "lastname": "Struja",
+    "email": "slaba.struja@sarajevogas.ba",
+    "password": "$2b$10$daj05mjYu/.WUYuCrqOzb.BN9jwZHQkKgTHDiu2hsOCno9N8uefTK",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Tarik",
+    "lastname": "Pita",
+    "email": "tarik.pita@sarajevogas.ba",
+    "password": "$2b$10$Woowid2DmK3UePeXX5khRezSEyyFAsz9BltjoFomuba.pozWrVrae",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent knjigovođa"
+  },
+  {
+    "firstname": "TENEO",
+    "lastname": "InfoDom",
+    "email": "teneo@sarajevogas.ba",
+    "password": "$2b$10$apCXMrJDXDvSJtUyuWdhzuIPBDDBJUA8ZbqvQtZ6fQwiNQsvioDdS",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Inžinjer za razvoj SW"
+  },
+  {
+    "firstname": "Vedad",
+    "lastname": "Kapo",
+    "email": "vedad.kapo@sarajevogas.ba",
+    "password": "$2b$10$2s70DbsiN8JpHumlP/eD8ewUdi0wkD6HFEwXMdGlIweP1s6Cs6C9u",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Almir",
+    "lastname": "Halilbegović",
+    "email": "ahalilbegovic@sarajevogas.ba",
+    "password": "$2b$10$hVXmHdl/ts6kG3Pyk7wb7OnnCsMfVnwVsIrG/HqUlkNix.R10EYtK",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći tehničar za projektovanje priključaka"
+  },
+  {
+    "firstname": "Amir",
+    "lastname": "Dedic",
+    "email": "adedic@sarajevogas.ba",
+    "password": "$2b$10$nHZ3HyvxgadgLno2TVF/1.SMiKnaXVpKhwzmfA2Aidw4QwKnYI7Ve",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći inžinjer za poslovni IS i korisničku podršku"
+  },
+  {
+    "firstname": "Edina",
+    "lastname": "Kovac",
+    "email": "ekovac@sarajevogas.ba",
+    "password": "$2b$10$uium7cVGXlQtXWEBq5t9AeLxlBK52PR1SSsthlSparcoOHB/.UonK",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Administrator"
+  },
+  {
+    "firstname": "Ishak",
+    "lastname": "Alajbegovic",
+    "email": "ishaka@sarajevogas.ba",
+    "password": "$2b$10$oTeMLI8582w9JbSfDotg0.HEkKMV/mg4qJwQWcEU9dsnz45cR9YoC",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći inžinjer za infrastrukturu"
+  },
+  {
+    "firstname": "Kenan",
+    "lastname": "Selmanović",
+    "email": "kenans@sarajevogas.ba",
+    "password": "$2b$10$8C.nSD1pRD8gDsPV8R4mNOybfB3d/Odab4dxr0OLyVbbiKV4b9iiW",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Šef službe za informacioni sistem"
+  },
+  {
+    "firstname": "Lejla",
+    "lastname": "Durmišević",
+    "email": "lejla.durmisevic@sarajevogas.ba",
+    "password": "$2b$10$pYV7iJoga729uNcbvIur5.2DqWzc8d8iUWgOYmTjyGeBW0Mnmh7Vy",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Mehmed",
+    "lastname": "Mehovic",
+    "email": "mmehovic@sarajevogas.ba",
+    "password": "$2b$10$kn3p9Y4OCb5R.pqxjyGDVuyRK3OViIDPMsKdkpfMEh.Mg/AlBKBty",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Rukovodilac Sektora ekonomike"
+  },
+  {
+    "firstname": "Munir",
+    "lastname": "Isakovic",
+    "email": "m.isakovic@sarajevogas.ba",
+    "password": "$2b$10$nRDyRRYILXGtyp3Vy3SX0.EbOa1LdmgpBOkUAyjSR0dhx.XAEfPIa",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Sistem analitičar"
+  },
+  {
+    "firstname": "Nihad",
+    "lastname": "Selimbegović",
+    "email": "nselimbegovic@sarajevogas.ba",
+    "password": "$2b$10$FPYDEpPTIFhPEBCJE9YkXuiEmjKZPpf8yMkgSPAXVKoIP35OVt/9S",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Referent porto blagajnik"
+  },
+  {
+    "firstname": "Nihada",
+    "lastname": "Glamoc",
+    "email": "nglamoc@sarajevogas.ba",
+    "password": "$2b$10$BzLF.oEtpTOJmWlZFXjyqOswMRtn8h/4Pv7P1WX3CPoDKAh8kBZ3.",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  },
+  {
+    "firstname": "Ramo",
+    "lastname": "Bronja",
+    "email": "rbronja@sarajevogas.ba",
+    "password": "$2b$10$rpTCwWPLQO2IcrudEgEEWOcBW7Us4J5muUPisgikO2huH.wPy7FTW",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Šef službe za podršku korisnicima"
+  },
+  {
+    "firstname": "Samra",
+    "lastname": "Dzananovic",
+    "email": "samra@sarajevogas.ba",
+    "password": "$2b$10$aOMXv96bkRwZNYulqZ8noubiTNl5FQOBVs6bH1WA9SChTePTTAFB2",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Vodeći referent za računovodstvene poslove"
+  },
+  {
+    "firstname": "Selma",
+    "lastname": "Džafić",
+    "email": "sdzafic@sarajevogas.ba",
+    "password": "$2b$10$ePBGvXlYO4LPlzo/PLhecu8c0YndJ21CilFQj0KNo9GDIBwSNZnRi",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Šef službe pravnih i kadrovskih poslova"
+  },
+  {
+    "firstname": "Senad",
+    "lastname": "Golic",
+    "email": "sgolic@sarajevogas.ba",
+    "password": "$2b$10$17Sy.0vNitOBONycyi0YiODPcc597ZL5iZTR.AUhGELmeWDUk1Poq",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Inžinjer za saglasnosti, standarde i normative"
+  },
+  {
+    "firstname": "Senad",
+    "lastname": "Habibovic",
+    "email": "shabibovic@sarajevogas.ba",
+    "password": "$2b$10$m77qBiWSg.wWhdTXO/NClua.yYbPxE4XKkbfllA7ewcNexqapVzfG",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za nabavku"
+  },
+  {
+    "firstname": "Zlatan",
+    "lastname": "Ćuk",
+    "email": "danko@sarajevogas.ba",
+    "password": "$2b$10$cLq6ZoOIoSI5hrRfyyDdoedUtM3ni1qgz/mr6tiGpUU/e3BQ1hoMG",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Inžinjer za poslovni IS i korisničku podršku"
+  },
+  {
+    "firstname": "Ahmed",
+    "lastname": "Isaković",
+    "email": "ahmed.isakovic@sarajevogas.ba",
+    "password": "$2b$10$.T5WAp7/efkxIQjtvbyPWOEiwXM8THfbw43rpqoARq5aljTNNAfg.",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Stručni saradnik za kadrovske poslove"
+  },
+  {
+    "firstname": "Emir",
+    "lastname": "Karahodzic",
+    "email": "ekarahodzic@sarajevogas.ba",
+    "password": "$2b$10$SrihSKupoBHoizW6lpxTIusl/uu23WeIZ8pezs8Kg.dw/j01hNVtK",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Poslovođa za održavanje i ugradnju mjerno regulacionih uređaja"
+  },
+  {
+    "firstname": "Harun",
+    "lastname": "Dautović",
+    "email": "harund@sarajevogas.ba",
+    "password": "$2b$10$suy8psCHGx/yUPmHcdqzi.FmqJJrYWrG5mhOU2kl6Yh3ujaCvOlzy",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Inžinjer za infrastrukturu"
+  },
+  {
+    "firstname": "Mehmed",
+    "lastname": "Jugović",
+    "email": "mjugovic@sarajevogas.ba",
+    "password": "$2b$10$4Dmx0n2JRNwR7bytvFJiueD8tJdRZaiYMk7ejGYHZt9vf4G0Oa2Ly",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Šef službe za održavanje i ugradnju mjerno regulacionih uređaja"
+  },
+  {
+    "firstname": "Emina",
+    "lastname": "Mulavdić",
+    "email": "emina.mulavdic@sarajevogas.ba",
+    "password": "$2b$10$vNBzX11Z/mfF1XixR8fXaemBLyQ8EE7Rfwsf4Qt7pkQj6D5NiCa4u",
+    "role": "User",
+    "sector": null,
+    "pozicija": "Employee"
+  }
+]

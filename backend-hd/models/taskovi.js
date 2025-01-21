@@ -36,6 +36,20 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.BOOLEAN,
             defaultValue: false,
         },
+
+        prijavaSmetnjiId: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'PrijavaSmetnji',
+                key: 'id'
+            },
+            allowNull: true, // Može biti null ako task nije vezan za prijavu smetnji
+        },
+
+        comment: {
+            type: DataTypes.TEXT,  // Dodaj kolonu comment
+            allowNull: true,
+        },
         createdAt: {
             type: DataTypes.DATE,
             allowNull: false,
@@ -53,6 +67,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Taskovi.associate = function(models) {
         Taskovi.belongsTo(models.User, { foreignKey: 'userId', as: 'User' });
+        Taskovi.belongsTo(models.PrijavaSmetnji, { foreignKey: 'prijavaSmetnjiId', as: 'PrijavaSmetnji' });
     };
 
     // Automatsko postavljanje sektora

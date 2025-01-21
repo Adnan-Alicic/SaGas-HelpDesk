@@ -12,7 +12,9 @@ const app = express(); // Ova linija mora biti pre korišćenja 'app'
 require('./config/passport-config')(passport); // Konfiguracija Passport-a
 
 // Omogućavanje CORS-a za sve zahteve
-app.use(cors());
+app.use(cors({
+    origin: '*'
+}));
 // Testiranje konekcije sa bazom
 const sequelize = new Sequelize('SaGas', 'postgres', 'adminadmin', {
     host: 'localhost',
@@ -35,9 +37,12 @@ app.use(session({
     saveUninitialized: false, // Ne čuva prazne sesije
 }));
 
+
+
 // Inicijalizacija Passport-a za autentifikaciju
 app.use(passport.initialize());
 app.use(passport.session());
+//Iport AD Logina
 
 // Importovanje ruta
 const authRoutes = require('./routes/auth');
@@ -71,11 +76,21 @@ app.get('/worker-dashboard', (req, res) => {
 swaggerConfig(app); // Dodavanje Swagger dokumentacije
 
 
+process.on('uncaughtException', (err) => {
+    console.error('Neadresirana greška:', err);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('Neadresirano odbijanje obećanja:', reason);
+});
+
+
 
 
 // Startovanje servera
+
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+app.listen(3000, '0.0.0.0', () => {
     console.log(`Server je pokrenut na portu ${PORT}`);
     console.log(`API dokumentacija je dostupna na http://localhost:${PORT}/api-docs`);
 });

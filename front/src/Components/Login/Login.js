@@ -1,66 +1,80 @@
 import React, { useState } from "react";
 import './Login.css';
-import { BrowserView, MobileView } from "react-device-detect";
+import { BrowserView } from "react-device-detect";
 import { useNavigate } from "react-router-dom";
-import { Button } from "reactstrap";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 function Login() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
+    const [loginType, setLoginType] = useState('local'); // Default je lokalna prijava
+    const [username, setUsername] = useState(''); // Za AD prijavu
+    const [email, setEmail] = useState(''); // Za lokalnu prijavu
+    const [password, setPassword] = useState(''); // Lozinka
+    const [errorMessage, setErrorMessage] = useState(''); // Poruke o grešci
+    const [modal, setModal] = useState(false); // Modal za promenu lozinke
+    const [oldPassword, setOldPassword] = useState(''); // Stara lozinka
+    const [newPassword, setNewPassword] = useState(''); // Nova lozinka
     const navigate = useNavigate();
 
+    const toggleModal = () => setModal(!modal); // Funkcija za otvaranje/zatvaranje modala
+
+    const handleChangePassword = () => {
+        console.log('Stara lozinka:', oldPassword);
+        console.log('Nova lozinka:', newPassword);
+        toggleModal(); // Zatvori modal
+        // Ovde možete implementirati logiku za promenu lozinke
+    };
+
     const handleLogin = async (e) => {
-        e.preventDefault(); // Ovdje sprječavamo defaultno ponašanje
+        e.preventDefault(); // Sprečavanje defaultnog ponašanja
+
+        const endpoint =
+            loginType === 'local'
+                ? `${process.env.REACT_APP_API_BASE_URL}/auth/login`
+                : `${process.env.REACT_APP_API_BASE_URL}/auth/ad-login`;
+
+        const requestData = loginType === 'local'
+            ? { email, password }
+            : { username, password };
+
         try {
-            const response = await fetch('http://localhost:3000/auth/login', {
+            const response = await fetch(endpoint, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ email, password }),
+                body: JSON.stringify(requestData),
             });
+
             const data = await response.json();
             console.log('Server odgovor:', data);
-        
-            if (response.ok) {
-                localStorage.setItem('token', data.token); // Sačuvajte token
-                localStorage.setItem('userRole', data.user.role); // Sačuvajte ulogu korisnika
-                localStorage.setItem('userId', data.user.id);  // Ispravno postavljanje userId
-                console.log('Sačuvan korisnički ID:', localStorage.getItem('userId'));
 
-                 // Sačuvaj korisničke podatke (ime, prezime, sektor)
+            if (response.ok) {
+                localStorage.setItem('token', data.token || '');
+                localStorage.setItem('userRole', data.user.role);
+                localStorage.setItem('userId', data.user.id);
+
                 localStorage.setItem('userData', JSON.stringify({
                     firstname: data.user.firstname,
                     lastname: data.user.lastname,
-                    sector: data.user.sector || 'Nije definisan sektor'
+                    sector: data.user.sector || 'Nije definisan sektor',
                 }));
-                console.log('Sačuvani podaci o korisniku:', localStorage.getItem('userData'));
 
-                // Dodajemo spremanje sektora u localStorage
-                const userSector = data.user.sector || 'Sektor 1'; // Primjer ručnog postavljanja
-                localStorage.setItem('userSector', userSector);
-                console.log('Sačuvan sektor:', userSector);
-
-                if (data.redirect) {
-                    console.log('Redirekcija na:', data.redirect);
-                    navigate(data.redirect);  // Proverite vrednost `data.redirect`
+                const redirectAfterLogin = localStorage.getItem('redirectAfterLogin');
+                if (redirectAfterLogin) {
+                    localStorage.removeItem('redirectAfterLogin');
+                    navigate(redirectAfterLogin);
+                } else if (data.redirect) {
+                    navigate(data.redirect);
                 } else {
                     console.error('Nema postavljenog redirect URL-a');
                 }
             } else {
-                setErrorMessage(data.message);
+                setErrorMessage(data.message || 'Greška prilikom prijave.');
                 alert(`Greška: ${data.message}`);
             }
         } catch (error) {
             console.error('Greška prilikom prijave:', error);
-        }
-    };
-
-    // Definicija handleKeyDown funkcije
-    const handleKeyDown = (event) => {
-        if (event.key === "Enter") {
-            handleLogin(event); 
+            setErrorMessage('Došlo je do greške na serveru.');
         }
     };
 
@@ -81,83 +95,108 @@ function Login() {
                             <div className="login-box">
                                 <h2 style={{ color: "#224798", textAlign: "center" }}>Login</h2>
                                 {errorMessage && <p style={{ color: 'red', textAlign: 'center' }}>{errorMessage}</p>}
-                                <form className="form" onSubmit={handleLogin}> {/* Ovdje koristimo onSubmit */}
-                                    <label style={{ color: "#224798" }} htmlFor="email">Email</label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        placeholder="ime.prezime@sarajevogas.ba"
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        onKeyDown={handleKeyDown}
-                                    />
-                                    <label style={{ color: "#224798" }} htmlFor="password">Password</label>
+                                <form className="form" onSubmit={handleLogin}>
+                                    <label style={{ color: "#224798" }} htmlFor="loginType">Vrsta prijave</label>
+                                    <select
+                                        id="loginType"
+                                        value={loginType}
+                                        onChange={(e) => setLoginType(e.target.value)}
+                                        className="login-type-dropdown"
+                                    >
+                                        <option value="local">Lokalna prijava</option>
+                                        <option value="ad">Prijava putem AD-a</option>
+                                    </select>
+    
+                                    {loginType === 'local' && (
+                                        <>
+                                            <label style={{ color: "#224798" }} htmlFor="email">Email</label>
+                                            <input
+                                                type="email"
+                                                id="email"
+                                                placeholder="ime.prezime@sarajevogas.ba"
+                                                value={email}
+                                                onChange={(e) => setEmail(e.target.value)}
+                                            />
+                                        </>
+                                    )}
+    
+                                    {loginType === 'ad' && (
+                                        <>
+                                            <label style={{ color: "#224798" }} htmlFor="username">Korisničko ime</label>
+                                            <input
+                                                type="text"
+                                                id="username"
+                                                placeholder="ime.prezime"
+                                                value={username}
+                                                onChange={(e) => setUsername(e.target.value)}
+                                            />
+                                        </>
+                                    )}
+    
+                                    <label style={{ color: "#224798" }} htmlFor="password">Lozinka</label>
                                     <input
                                         type="password"
                                         id="password"
-                                        placeholder="Unesi svoj password"
+                                        placeholder="Unesi svoju lozinku"
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
-                                        onKeyDown={handleKeyDown}
                                     />
-                                    <Button
-                                        style={{ textAlign: "center", textDecoration: "none" }}
-                                        className='button'
-                                        size="lg"
-                                        type="submit" // Dodajemo type="submit" da radi sa onSubmit
-                                    >
-                                        Login
-                                    </Button>
+    
+                                    <div style={{ display: "flex", justifyContent: "space-between", gap: "10px" }}>
+                                        <Button
+                                            className='button'
+                                            size="lg"
+                                            type="submit"
+                                        >
+                                            Login
+                                        </Button>
+                                        <Button
+                                            className='button'
+                                            id="btn-change"
+                                            size="lg"
+                                            onClick={toggleModal}
+                                        >
+                                            Promijeni lozinku
+                                        </Button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </BrowserView>
-            <MobileView>
-                <div className='login-body-mobile'>
-                    <div className='image-div'>
-                        <img style={{ width: "25%", height: "100%" }} src="logo_samo.png" alt="SarajevoGas Logo" />
-                    </div>
-                    <div className='heading-div'>
-                        <h2 style={{ textAlign: "center", margin: "0" }}>Sarajevogas Helpdesk</h2>
-                    </div>
-                    <h2 style={{ color: "#224798", textAlign: "center" }}>Login</h2>
-                    {errorMessage && <p style={{ color: 'red', textAlign: 'center' }}>{errorMessage}</p>}
-                    <form className="form-mobile" onSubmit={handleLogin}>
-                        <label style={{ color: "#224798" }} htmlFor="email">Email</label>
-                        <input
-                            style={{ width: "50%" }}
-                            type="email"
-                            id="email"
-                            placeholder="ime.prezime@sarajevogas.ba"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            onKeyDown={handleKeyDown}
-                        />
-                        <label style={{ color: "#224798" }} htmlFor="password">Password</label>
-                        <input
-                            style={{ width: "50%" }}
-                            type="password"
-                            id="password"
-                            placeholder="Unesi svoj password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            onKeyDown={handleKeyDown}
-                        />
-                        <Button
-                            style={{ textAlign: "center", textDecoration: "none", width: "50%" }}
-                            className='button-mobile'
-                            size="lg"
-                            type="submit"
-                        >
-                            Login
-                        </Button>
-                    </form>
-                </div>
-            </MobileView>
+    
+            {/* Dodaj zatamnjenu pozadinu kada je modal otvoren */}
+            {modal && <div className="modal-backdrop"></div>}
+    
+            <Modal isOpen={modal} toggle={toggleModal}>
+            <ModalHeader toggle={false}>Promjena lozinke</ModalHeader> {/* Uklonjen automatski dugme */}
+                <ModalBody>
+                    <label>Unesite staru lozinku</label>
+                    <input
+                        type="password"
+                        value={oldPassword}
+                        onChange={(e) => setOldPassword(e.target.value)}
+                    />
+                    <label>Unesite novu lozinku</label>
+                    <input
+                        type="password"
+                        value={newPassword}
+                        onChange={(e) => setNewPassword(e.target.value)}
+                    />
+                </ModalBody>
+                <ModalFooter>
+                    <Button color="primary" onClick={handleChangePassword}>
+                        Promijeni
+                    </Button>
+                    <Button color="secondary" onClick={toggleModal}>
+                        Zatvori
+                    </Button>
+                </ModalFooter>
+            </Modal>
         </>
     );
+    
 }
 
 export default Login;

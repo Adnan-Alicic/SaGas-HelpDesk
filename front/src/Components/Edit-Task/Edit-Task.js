@@ -17,7 +17,7 @@ function EditTask({ task }) {
       event.preventDefault();
 
       try {
-          const response = await fetch(`http://localhost:3000/api/tasks/${task.id}`, {
+          const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/tasks/${task.id}`, {
               method: 'PUT',
               headers: {
                   'Content-Type': 'application/json',
